@@ -1,0 +1,964 @@
+﻿<table class="table_box" id="table_box" width="100%" border="1">
+                <tbody><tr>
+                    <td id="notice" colspan="16">
+                        <p class="notice_tit">
+                            <span class="rd_icon speaker_blue"></span>공지사항 
+                        </p>
+                        <div style="width:95%;margin:auto;padding:10px 0 15px;text-align:left;white-space:initial;">* 수강신청 기간 :  ~  <span class="riro-label" style="border: 1px solid #f3f3f3;background:#f3f3f3;color: #666666;">마감</span><br></div>            
+                    </td>
+                </tr>
+                
+                <tr class="thead sticky_tr" style="background:#CEEAFC;border-top:solid 2px #666;">
+                    <td rowspan="2">구분</td>
+                    <td rowspan="2">교과영역</td>
+                    <td rowspan="2">교과(군)</td>
+                    <td rowspan="2">과목구분</td>
+                    <td rowspan="2">과목</td>
+                    <td rowspan="2">기본<br>단위</td>
+                    <td rowspan="2">운영<br>단위</td>
+                    <td colspan="2" class="bd_left">1학년</td>
+                    <td colspan="2" class="bd_left">2학년</td>
+                    <td colspan="2" class="bd_all">3학년</td>
+                    <td class="setting" rowspan="2">비고</td>
+                    <td class="setting" rowspan="2">이수<br>단위</td>
+                    <td class="setting" rowspan="2">필수이수<br>단위</td>
+                </tr>
+                <tr class="thead" style="background:#CEEAFC;">
+                    <td class="sticky_td bd_left">1학기</td>
+                    <td class="sticky_td">2학기</td>
+                    <td class="sticky_td bd_left">1학기</td>
+                    <td class="sticky_td">2학기</td>
+                    <td class="sticky_td bd_left">1학기</td>
+                    <td class="sticky_td bd_right">2학기</td>
+                </tr>
+                
+<tr style="text-align:center;">
+<td rowspan="21" style="background:#EFF7FC;">학교지정</td>
+<td rowspan="10" style="background:#EFF7FC;">기초</td>
+<td rowspan="3" style="background:#EFF7FC;">국어</td>
+<td style="background:#EFF7FC;">공통</td>
+<td nowrap="" class="sub">국어</td>
+<td>8</td>
+<td style="background:#EEEEEE;" data-tooltip="학년제" class="bd_right">8</td>
+<td style="background:#FFF;"><b>4</b></td>
+<td style="background:#FFF;" class="bd_right"><b>4</b></td>
+<td></td>
+<td class="bd_right"></td>
+<td></td>
+<td style="background:#;" class="bd_right"></td>
+<td></td>
+<td rowspan="3">16</td>
+<td rowspan="3">10</td></tr>
+<tr style="text-align:center;">
+<td style="background:#EFF7FC;">일반</td>
+<td nowrap="" class="sub">문학</td>
+<td>5</td>
+<td class="bd_right">3</td>
+<td></td>
+<td class="bd_right"></td>
+<td style="background:#FFF;"><b>3</b></td>
+<td class="bd_right"></td>
+<td></td>
+<td style="background:#;" class="bd_right"></td>
+<td></td></tr>
+<tr style="text-align:center;">
+<td style="background:#EFF7FC;">일반</td>
+<td nowrap="" class="sub">독서</td>
+<td>5</td>
+<td class="bd_right">3</td>
+<td></td>
+<td class="bd_right"></td>
+<td></td>
+<td style="background:#FFF;" class="bd_right"><b>3</b></td>
+<td></td>
+<td style="background:#;" class="bd_right"></td>
+<td></td></tr>
+<tr style="text-align:center;">
+<td rowspan="3" style="background:#EFF7FC;">수학</td>
+<td style="background:#EFF7FC;">공통</td>
+<td nowrap="" class="sub">수학</td>
+<td>8</td>
+<td style="background:#EEEEEE;" data-tooltip="학년제" class="bd_right">8</td>
+<td style="background:#FFF;"><b>4</b></td>
+<td style="background:#FFF;" class="bd_right"><b>4</b></td>
+<td></td>
+<td class="bd_right"></td>
+<td></td>
+<td style="background:#;" class="bd_right"></td>
+<td></td>
+<td rowspan="3">16</td>
+<td rowspan="3">10</td></tr>
+<tr style="text-align:center;">
+<td style="background:#EFF7FC;">일반</td>
+<td nowrap="" class="sub">수학Ⅰ</td>
+<td>5</td>
+<td class="bd_right">4</td>
+<td></td>
+<td class="bd_right"></td>
+<td style="background:#FFF;"><b>4</b></td>
+<td class="bd_right"></td>
+<td></td>
+<td style="background:#;" class="bd_right"></td>
+<td></td></tr>
+<tr style="text-align:center;">
+<td style="background:#EFF7FC;">일반</td>
+<td nowrap="" class="sub">수학Ⅱ</td>
+<td>5</td>
+<td class="bd_right">4</td>
+<td></td>
+<td class="bd_right"></td>
+<td></td>
+<td style="background:#FFF;" class="bd_right"><b>4</b></td>
+<td></td>
+<td style="background:#;" class="bd_right"></td>
+<td></td></tr>
+<tr style="text-align:center;">
+<td rowspan="3" style="background:#EFF7FC;">영어</td>
+<td style="background:#EFF7FC;">공통</td>
+<td nowrap="" class="sub">영어</td>
+<td>8</td>
+<td style="background:#EEEEEE;" data-tooltip="학년제" class="bd_right">8</td>
+<td style="background:#FFF;"><b>4</b></td>
+<td style="background:#FFF;" class="bd_right"><b>4</b></td>
+<td></td>
+<td class="bd_right"></td>
+<td></td>
+<td style="background:#;" class="bd_right"></td>
+<td></td>
+<td rowspan="3">14</td>
+<td rowspan="3">10</td></tr>
+<tr style="text-align:center;">
+<td style="background:#EFF7FC;">일반</td>
+<td nowrap="" class="sub">영어Ⅰ</td>
+<td>5</td>
+<td class="bd_right">4</td>
+<td></td>
+<td class="bd_right"></td>
+<td style="background:#FFF;"><b>4</b></td>
+<td class="bd_right"></td>
+<td></td>
+<td style="background:#;" class="bd_right"></td>
+<td></td></tr>
+<tr style="text-align:center;">
+<td style="background:#EFF7FC;">일반</td>
+<td nowrap="" class="sub">영어Ⅱ</td>
+<td>5</td>
+<td class="bd_right">4</td>
+<td></td>
+<td class="bd_right"></td>
+<td></td>
+<td style="background:#FFF;" class="bd_right"><b>4</b></td>
+<td></td>
+<td style="background:#;" class="bd_right"></td>
+<td></td></tr>
+<tr style="text-align:center;">
+<td style="background:#EFF7FC;">한국사</td>
+<td style="background:#EFF7FC;">공통</td>
+<td nowrap="" class="sub">한국사</td>
+<td>5</td>
+<td style="background:#EEEEEE;" data-tooltip="학년제" class="bd_right">6</td>
+<td style="background:#FFF;"><b>3</b></td>
+<td style="background:#FFF;" class="bd_right"><b>3</b></td>
+<td></td>
+<td class="bd_right"></td>
+<td></td>
+<td style="background:#;" class="bd_right"></td>
+<td></td>
+<td>6</td>
+<td>6</td></tr>
+<tr style="text-align:center;">
+<td rowspan="3" style="background:#EFF7FC;">탐구</td>
+<td style="background:#EFF7FC;">사회</td>
+<td style="background:#EFF7FC;">공통</td>
+<td nowrap="" class="sub">통합사회</td>
+<td>8</td>
+<td style="background:#EEEEEE;" data-tooltip="학년제" class="bd_right">6</td>
+<td style="background:#FFF;"><b>3</b></td>
+<td style="background:#FFF;" class="bd_right"><b>3</b></td>
+<td></td>
+<td class="bd_right"></td>
+<td></td>
+<td style="background:#;" class="bd_right"></td>
+<td></td>
+<td>6</td>
+<td>10</td></tr>
+<tr style="text-align:center;">
+<td rowspan="2" style="background:#EFF7FC;">과학</td>
+<td style="background:#EFF7FC;">공통</td>
+<td nowrap="" class="sub">통합과학</td>
+<td>8</td>
+<td style="background:#EEEEEE;" data-tooltip="학년제" class="bd_right">6</td>
+<td style="background:#FFF;"><b>3</b></td>
+<td style="background:#FFF;" class="bd_right"><b>3</b></td>
+<td></td>
+<td class="bd_right"></td>
+<td></td>
+<td style="background:#;" class="bd_right"></td>
+<td></td>
+<td rowspan="2">8</td>
+<td rowspan="2">12</td></tr>
+<tr style="text-align:center;">
+<td style="background:#EFF7FC;">공통</td>
+<td nowrap="" class="sub">과학탐구실험</td>
+<td>2</td>
+<td style="background:#EEEEEE;" data-tooltip="학년제" class="bd_right">2</td>
+<td style="background:#FFF;"><b>1</b></td>
+<td style="background:#FFF;" class="bd_right"><b>1</b></td>
+<td></td>
+<td class="bd_right"></td>
+<td></td>
+<td style="background:#;" class="bd_right"></td>
+<td></td></tr>
+<tr style="text-align:center;">
+<td rowspan="5" style="background:#EFF7FC;">체육예술</td>
+<td rowspan="2" style="background:#EFF7FC;">예술</td>
+<td style="background:#EFF7FC;">일반</td>
+<td nowrap="" class="sub">음악</td>
+<td>5</td>
+<td class="bd_right">3</td>
+<td style="background:#FFF;"><b>3</b></td>
+<td class="bd_right"></td>
+<td></td>
+<td class="bd_right"></td>
+<td></td>
+<td style="background:#;" class="bd_right"></td>
+<td></td>
+<td rowspan="2">6</td>
+<td rowspan="5">10</td></tr>
+<tr style="text-align:center;">
+<td style="background:#EFF7FC;">일반</td>
+<td nowrap="" class="sub">미술</td>
+<td>5</td>
+<td class="bd_right">3</td>
+<td></td>
+<td style="background:#FFF;" class="bd_right"><b>3</b></td>
+<td></td>
+<td class="bd_right"></td>
+<td></td>
+<td style="background:#;" class="bd_right"></td>
+<td></td></tr>
+<tr style="text-align:center;">
+<td rowspan="3" style="background:#EFF7FC;">체육</td>
+<td style="background:#EFF7FC;">일반</td>
+<td nowrap="" class="sub">체육</td>
+<td>5</td>
+<td style="background:#EEEEEE;" data-tooltip="학년제" class="bd_right">4</td>
+<td style="background:#FFF;"><b>2</b></td>
+<td style="background:#FFF;" class="bd_right"><b>2</b></td>
+<td></td>
+<td class="bd_right"></td>
+<td></td>
+<td style="background:#;" class="bd_right"></td>
+<td></td>
+<td rowspan="3">12</td></tr>
+<tr style="text-align:center;">
+<td style="background:#EFF7FC;">일반</td>
+<td nowrap="" class="sub">운동과 건강</td>
+<td>5</td>
+<td style="background:#EEEEEE;" data-tooltip="학년제" class="bd_right">4</td>
+<td></td>
+<td class="bd_right"></td>
+<td style="background:#FFF;"><b>2</b></td>
+<td style="background:#FFF;" class="bd_right"><b>2</b></td>
+<td></td>
+<td style="background:#;" class="bd_right"></td>
+<td></td></tr>
+<tr style="text-align:center;">
+<td style="background:#EFF7FC;">진로</td>
+<td nowrap="" class="sub">스포츠 생활</td>
+<td>5</td>
+<td style="background:#EEEEEE;" data-tooltip="학년제" class="bd_right">4</td>
+<td></td>
+<td class="bd_right"></td>
+<td></td>
+<td class="bd_right"></td>
+<td style="background:#FFF;"><b>2</b></td>
+<td style="background:#FFF;" class="bd_right"><b>2</b></td>
+<td></td></tr>
+<tr style="text-align:center;">
+<td rowspan="3" style="background:#EFF7FC;">생활교양</td>
+<td style="background:#EFF7FC;">기술∙가정</td>
+<td style="background:#EFF7FC;">진로</td>
+<td nowrap="" class="sub">진로와 직업</td>
+<td>5</td>
+<td style="background:#EEEEEE;" data-tooltip="학년제" class="bd_right">2</td>
+<td style="background:#FFF;"><b>1</b></td>
+<td style="background:#FFF;" class="bd_right"><b>1</b></td>
+<td></td>
+<td class="bd_right"></td>
+<td></td>
+<td style="background:#;" class="bd_right"></td>
+<td></td>
+<td rowspan="3">8</td>
+<td rowspan="3">16</td></tr>
+<tr style="text-align:center;">
+<td style="background:#EFF7FC;">교양</td>
+<td style="background:#EFF7FC;">일반</td>
+<td nowrap="" class="sub">종교</td>
+<td>5</td>
+<td style="background:#EEEEEE;" class="bd_right">2</td>
+<td style="background:#FFF;"><b>1</b></td>
+<td style="background:#FFFF00;cursor:pointer;" data-tooltip="과목 선택(수정)하기" class="bd_right"></td>
+<td></td>
+<td class="bd_right"></td>
+<td></td>
+<td style="background:#;" class="bd_right"></td>
+<td></td></tr>
+<tr style="text-align:center;">
+<td style="background:#EFF7FC;">한문</td>
+<td style="background:#EFF7FC;">일반</td>
+<td nowrap="" class="sub">한문Ⅰ</td>
+<td>5</td>
+<td style="background:#EEEEEE;" data-tooltip="학년제" class="bd_right">4</td>
+<td></td>
+<td class="bd_right"></td>
+<td style="background:#FFF;"><b>2</b></td>
+<td style="background:#FFF;" class="bd_right"><b>2</b></td>
+<td></td>
+<td style="background:#;" class="bd_right"></td>
+<td></td></tr>
+<tr style="text-align:center;">
+<td rowspan="44" style="background:#EFF7FC;">학생선택</td>
+<td rowspan="8" style="background:#EFF7FC;">기초</td>
+<td style="background:#EFF7FC;">국어</td>
+<td style="background:#EFF7FC;">진로</td>
+<td nowrap="" class="sub">심화국어</td>
+<td>5</td>
+<td style="background:#EEEEEE;" data-tooltip="학년제" class="bd_right">4</td>
+<td></td>
+<td class="bd_right"></td>
+<td colspan="2" class="cols" style="background:#FFD700;cursor:pointer;" data-tooltip="과목 선택(수정)하기">[택1]</td>
+<td></td>
+<td style="background:#;" class="bd_right"></td>
+<td></td>
+<td rowspan="8">22</td>
+<td></td></tr>
+<tr style="text-align:center;">
+<td style="background:#EFF7FC;">수학</td>
+<td style="background:#EFF7FC;">진로</td>
+<td nowrap="" class="sub">기하</td>
+<td>5</td>
+<td style="background:#EEEEEE;" data-tooltip="학년제" class="bd_right">4</td>
+<td></td>
+<td class="bd_right"></td>
+<td style="background:#FFD700;cursor:pointer;" data-tooltip="과목 선택(수정)하기"></td>
+<td style="background:#FFD700;cursor:pointer;" data-tooltip="과목 선택(수정)하기" class="bd_right"></td>
+<td></td>
+<td style="background:#;" class="bd_right"></td>
+<td></td>
+<td></td></tr>
+<tr style="text-align:center;">
+<td style="background:#EFF7FC;">영어</td>
+<td style="background:#EFF7FC;">진로</td>
+<td nowrap="" class="sub">진로영어</td>
+<td>5</td>
+<td style="background:#EEEEEE;" data-tooltip="학년제" class="bd_right">4</td>
+<td></td>
+<td class="bd_right"></td>
+<td style="background:#FFD700;cursor:pointer;" data-tooltip="과목 선택(수정)하기"></td>
+<td style="background:#FFD700;cursor:pointer;" data-tooltip="과목 선택(수정)하기" class="bd_right"></td>
+<td></td>
+<td style="background:#;" class="bd_right"></td>
+<td></td>
+<td></td></tr>
+<tr style="text-align:center;">
+<td style="background:#EFF7FC;">국어</td>
+<td style="background:#EFF7FC;">일반</td>
+<td nowrap="" class="sub">화법과 작문</td>
+<td>5</td>
+<td style="background:#EEEEEE;" data-tooltip="학년제" class="bd_right">6</td>
+<td></td>
+<td class="bd_right"></td>
+<td></td>
+<td class="bd_right"></td>
+<td colspan="2" class="cols" style="background:#FFCEB0;cursor:pointer;" data-tooltip="과목 선택(수정)하기">[택4]</td>
+<td rowspan="5"></td>
+<td></td></tr>
+<tr style="text-align:center;">
+<td style="background:#EFF7FC;">국어</td>
+<td style="background:#EFF7FC;">일반</td>
+<td nowrap="" class="sub">언어와 매체</td>
+<td>5</td>
+<td style="background:#EEEEEE;" data-tooltip="학년제" class="bd_right">6</td>
+<td></td>
+<td class="bd_right"></td>
+<td></td>
+<td class="bd_right"></td>
+<td style="background:#FFCEB0;cursor:pointer;" data-tooltip="과목 선택(수정)하기"></td>
+<td style="background:#FFCEB0;cursor:pointer;" data-tooltip="과목 선택(수정)하기" class="bd_right"></td>
+<td></td></tr>
+<tr style="text-align:center;">
+<td style="background:#EFF7FC;">수학</td>
+<td style="background:#EFF7FC;">일반</td>
+<td nowrap="" class="sub">미적분</td>
+<td>5</td>
+<td style="background:#EEEEEE;" data-tooltip="학년제" class="bd_right">6</td>
+<td></td>
+<td class="bd_right"></td>
+<td></td>
+<td class="bd_right"></td>
+<td style="background:#FFCEB0;cursor:pointer;" data-tooltip="과목 선택(수정)하기"></td>
+<td style="background:#FFCEB0;cursor:pointer;" data-tooltip="과목 선택(수정)하기" class="bd_right"></td>
+<td></td></tr>
+<tr style="text-align:center;">
+<td style="background:#EFF7FC;">수학</td>
+<td style="background:#EFF7FC;">일반</td>
+<td nowrap="" class="sub">확률과 통계</td>
+<td>5</td>
+<td style="background:#EEEEEE;" data-tooltip="학년제" class="bd_right">6</td>
+<td></td>
+<td class="bd_right"></td>
+<td></td>
+<td class="bd_right"></td>
+<td style="background:#FFCEB0;cursor:pointer;" data-tooltip="과목 선택(수정)하기"></td>
+<td style="background:#FFCEB0;cursor:pointer;" data-tooltip="과목 선택(수정)하기" class="bd_right"></td>
+<td></td></tr>
+<tr style="text-align:center;">
+<td style="background:#EFF7FC;">영어</td>
+<td style="background:#EFF7FC;">일반</td>
+<td nowrap="" class="sub">영어 독해와 작문</td>
+<td>5</td>
+<td style="background:#EEEEEE;" data-tooltip="학년제" class="bd_right">6</td>
+<td></td>
+<td class="bd_right"></td>
+<td></td>
+<td class="bd_right"></td>
+<td style="background:#FFCEB0;cursor:pointer;" data-tooltip="과목 선택(수정)하기"></td>
+<td style="background:#FFCEB0;cursor:pointer;" data-tooltip="과목 선택(수정)하기" class="bd_right"></td>
+<td></td></tr>
+<tr style="text-align:center;">
+<td rowspan="11" style="background:#EFF7FC;">탐구</td>
+<td style="background:#EFF7FC;">사회</td>
+<td style="background:#EFF7FC;">일반</td>
+<td nowrap="" class="sub">세계지리</td>
+<td>5</td>
+<td style="background:#EEEEEE;" data-tooltip="학년제" class="bd_right">6</td>
+<td></td>
+<td class="bd_right"></td>
+<td></td>
+<td class="bd_right"></td>
+<td colspan="2" class="cols" style="background:#FFB689;cursor:pointer;" data-tooltip="과목 선택(수정)하기">[택3]</td>
+<td></td>
+<td rowspan="11">18</td>
+<td></td></tr>
+<tr style="text-align:center;">
+<td style="background:#EFF7FC;">사회</td>
+<td style="background:#EFF7FC;">일반</td>
+<td nowrap="" class="sub">동아시아사</td>
+<td>5</td>
+<td style="background:#EEEEEE;" data-tooltip="학년제" class="bd_right">6</td>
+<td></td>
+<td class="bd_right"></td>
+<td></td>
+<td class="bd_right"></td>
+<td style="background:#FFB689;cursor:pointer;" data-tooltip="과목 선택(수정)하기"></td>
+<td style="background:#FFB689;cursor:pointer;" data-tooltip="과목 선택(수정)하기" class="bd_right"></td>
+<td></td>
+<td></td></tr>
+<tr style="text-align:center;">
+<td style="background:#EFF7FC;">사회</td>
+<td style="background:#EFF7FC;">진로</td>
+<td nowrap="" class="sub">국제 경제</td>
+<td>5</td>
+<td style="background:#EEEEEE;" data-tooltip="학년제" class="bd_right">6</td>
+<td></td>
+<td class="bd_right"></td>
+<td></td>
+<td class="bd_right"></td>
+<td style="background:#FFB689;cursor:pointer;" data-tooltip="과목 선택(수정)하기"></td>
+<td style="background:#FFB689;cursor:pointer;" data-tooltip="과목 선택(수정)하기" class="bd_right"></td>
+<td></td>
+<td></td></tr>
+<tr style="text-align:center;">
+<td style="background:#EFF7FC;">사회</td>
+<td style="background:#EFF7FC;">일반</td>
+<td nowrap="" class="sub">생활과 윤리</td>
+<td>5</td>
+<td style="background:#EEEEEE;" data-tooltip="학년제" class="bd_right">6</td>
+<td></td>
+<td class="bd_right"></td>
+<td></td>
+<td class="bd_right"></td>
+<td style="background:#FFB689;cursor:pointer;" data-tooltip="과목 선택(수정)하기"></td>
+<td style="background:#FFB689;cursor:pointer;" data-tooltip="과목 선택(수정)하기" class="bd_right"></td>
+<td></td>
+<td></td></tr>
+<tr style="text-align:center;">
+<td style="background:#EFF7FC;">사회</td>
+<td style="background:#EFF7FC;">진로</td>
+<td nowrap="" class="sub">고전과 윤리</td>
+<td>5</td>
+<td style="background:#EEEEEE;" data-tooltip="학년제" class="bd_right">6</td>
+<td></td>
+<td class="bd_right"></td>
+<td></td>
+<td class="bd_right"></td>
+<td style="background:#FFB689;cursor:pointer;" data-tooltip="과목 선택(수정)하기"></td>
+<td style="background:#FFB689;cursor:pointer;" data-tooltip="과목 선택(수정)하기" class="bd_right"></td>
+<td></td>
+<td></td></tr>
+<tr style="text-align:center;">
+<td style="background:#EFF7FC;">사회</td>
+<td style="background:#EFF7FC;">진로</td>
+<td nowrap="" class="sub">여행지리</td>
+<td>5</td>
+<td style="background:#EEEEEE;" data-tooltip="학년제" class="bd_right">6</td>
+<td></td>
+<td class="bd_right"></td>
+<td></td>
+<td class="bd_right"></td>
+<td style="background:#FFB689;cursor:pointer;" data-tooltip="과목 선택(수정)하기"></td>
+<td style="background:#FFB689;cursor:pointer;" data-tooltip="과목 선택(수정)하기" class="bd_right"></td>
+<td></td>
+<td></td></tr>
+<tr style="text-align:center;">
+<td style="background:#EFF7FC;">과학</td>
+<td style="background:#EFF7FC;">진로</td>
+<td nowrap="" class="sub">물리학Ⅱ</td>
+<td>5</td>
+<td style="background:#EEEEEE;" data-tooltip="학년제" class="bd_right">6</td>
+<td></td>
+<td class="bd_right"></td>
+<td></td>
+<td class="bd_right"></td>
+<td style="background:#FFB689;cursor:pointer;" data-tooltip="과목 선택(수정)하기"></td>
+<td style="background:#FFB689;cursor:pointer;" data-tooltip="과목 선택(수정)하기" class="bd_right"></td>
+<td></td>
+<td></td></tr>
+<tr style="text-align:center;">
+<td style="background:#EFF7FC;">과학</td>
+<td style="background:#EFF7FC;">진로</td>
+<td nowrap="" class="sub">화학Ⅱ</td>
+<td>5</td>
+<td style="background:#EEEEEE;" data-tooltip="학년제" class="bd_right">6</td>
+<td></td>
+<td class="bd_right"></td>
+<td></td>
+<td class="bd_right"></td>
+<td style="background:#FFB689;cursor:pointer;" data-tooltip="과목 선택(수정)하기"></td>
+<td style="background:#FFB689;cursor:pointer;" data-tooltip="과목 선택(수정)하기" class="bd_right"></td>
+<td></td>
+<td></td></tr>
+<tr style="text-align:center;">
+<td style="background:#EFF7FC;">과학</td>
+<td style="background:#EFF7FC;">진로</td>
+<td nowrap="" class="sub">생명과학Ⅱ</td>
+<td>5</td>
+<td style="background:#EEEEEE;" data-tooltip="학년제" class="bd_right">6</td>
+<td></td>
+<td class="bd_right"></td>
+<td></td>
+<td class="bd_right"></td>
+<td style="background:#FFB689;cursor:pointer;" data-tooltip="과목 선택(수정)하기"></td>
+<td style="background:#FFB689;cursor:pointer;" data-tooltip="과목 선택(수정)하기" class="bd_right"></td>
+<td></td>
+<td></td></tr>
+<tr style="text-align:center;">
+<td style="background:#EFF7FC;">과학</td>
+<td style="background:#EFF7FC;">진로</td>
+<td nowrap="" class="sub">지구과학Ⅱ</td>
+<td>5</td>
+<td style="background:#EEEEEE;" data-tooltip="학년제" class="bd_right">6</td>
+<td></td>
+<td class="bd_right"></td>
+<td></td>
+<td class="bd_right"></td>
+<td style="background:#FFB689;cursor:pointer;" data-tooltip="과목 선택(수정)하기"></td>
+<td style="background:#FFB689;cursor:pointer;" data-tooltip="과목 선택(수정)하기" class="bd_right"></td>
+<td></td>
+<td></td></tr>
+<tr style="text-align:center;">
+<td style="background:#EFF7FC;">과학</td>
+<td style="background:#EFF7FC;">진로</td>
+<td nowrap="" class="sub">생활과 과학</td>
+<td>5</td>
+<td style="background:#EEEEEE;" data-tooltip="학년제" class="bd_right">6</td>
+<td></td>
+<td class="bd_right"></td>
+<td></td>
+<td class="bd_right"></td>
+<td style="background:#FFB689;cursor:pointer;" data-tooltip="과목 선택(수정)하기"></td>
+<td style="background:#FFB689;cursor:pointer;" data-tooltip="과목 선택(수정)하기" class="bd_right"></td>
+<td></td>
+<td></td></tr>
+<tr style="text-align:center;">
+<td rowspan="2" style="background:#EFF7FC;">체육예술</td>
+<td style="background:#EFF7FC;">예술</td>
+<td style="background:#EFF7FC;">진로</td>
+<td nowrap="" class="sub">음악 감상과 비평</td>
+<td>5</td>
+<td style="background:#EEEEEE;" data-tooltip="학년제" class="bd_right">4</td>
+<td></td>
+<td class="bd_right"></td>
+<td></td>
+<td class="bd_right"></td>
+<td colspan="2" class="cols" style="background:#69D8AD;cursor:pointer;" data-tooltip="과목 선택(수정)하기">[택1]</td>
+<td></td>
+<td rowspan="2">4</td>
+<td></td></tr>
+<tr style="text-align:center;">
+<td style="background:#EFF7FC;">예술</td>
+<td style="background:#EFF7FC;">진로</td>
+<td nowrap="" class="sub">미술 감상과 비평</td>
+<td>5</td>
+<td style="background:#EEEEEE;" data-tooltip="학년제" class="bd_right">4</td>
+<td></td>
+<td class="bd_right"></td>
+<td></td>
+<td class="bd_right"></td>
+<td style="background:#69D8AD;cursor:pointer;" data-tooltip="과목 선택(수정)하기"></td>
+<td style="background:#69D8AD;cursor:pointer;" data-tooltip="과목 선택(수정)하기" class="bd_right"></td>
+<td></td>
+<td></td></tr>
+<tr style="text-align:center;">
+<td rowspan="4" style="background:#EFF7FC;">생활교양</td>
+<td style="background:#EFF7FC;">제2외국어</td>
+<td style="background:#EFF7FC;">일반</td>
+<td nowrap="" class="sub">중국어Ⅰ</td>
+<td>5</td>
+<td style="background:#EEEEEE;" data-tooltip="학년제" class="bd_right">6</td>
+<td></td>
+<td class="bd_right"></td>
+<td colspan="2" class="cols" style="background:#A6A7D8;cursor:pointer;" data-tooltip="과목 선택(수정)하기">[택1]</td>
+<td></td>
+<td style="background:#;" class="bd_right"></td>
+<td></td>
+<td rowspan="4">8</td>
+<td></td></tr>
+<tr style="text-align:center;">
+<td style="background:#EFF7FC;">제2외국어</td>
+<td style="background:#EFF7FC;">일반</td>
+<td nowrap="" class="sub">일본어Ⅰ</td>
+<td>5</td>
+<td style="background:#EEEEEE;" data-tooltip="학년제" class="bd_right">6</td>
+<td></td>
+<td class="bd_right"></td>
+<td style="background:#A6A7D8;cursor:pointer;" data-tooltip="과목 선택(수정)하기"></td>
+<td style="background:#A6A7D8;cursor:pointer;" data-tooltip="과목 선택(수정)하기" class="bd_right"></td>
+<td></td>
+<td style="background:#;" class="bd_right"></td>
+<td></td>
+<td></td></tr>
+<tr style="text-align:center;">
+<td style="background:#EFF7FC;">교양</td>
+<td style="background:#EFF7FC;">일반</td>
+<td nowrap="" class="sub">심리학</td>
+<td>5</td>
+<td style="background:#EEEEEE;" data-tooltip="학년제" class="bd_right">2</td>
+<td></td>
+<td class="bd_right"></td>
+<td></td>
+<td class="bd_right"></td>
+<td colspan="2" class="cols" style="background:#D8BEE4;cursor:pointer;" data-tooltip="과목 선택(수정)하기">[택1]</td>
+<td></td>
+<td></td></tr>
+<tr style="text-align:center;">
+<td style="background:#EFF7FC;">교양</td>
+<td style="background:#EFF7FC;">일반</td>
+<td nowrap="" class="sub">보건</td>
+<td>5</td>
+<td style="background:#EEEEEE;" data-tooltip="학년제" class="bd_right">2</td>
+<td></td>
+<td class="bd_right"></td>
+<td></td>
+<td class="bd_right"></td>
+<td style="background:#D8BEE4;cursor:pointer;" data-tooltip="과목 선택(수정)하기"></td>
+<td style="background:#D8BEE4;cursor:pointer;" data-tooltip="과목 선택(수정)하기" class="bd_right"></td>
+<td></td>
+<td></td></tr>
+<tr style="text-align:center;">
+<td rowspan="19" style="background:#EFF7FC;">교과영역간선택과목</td>
+<td style="background:#EFF7FC;">사회</td>
+<td style="background:#EFF7FC;">일반</td>
+<td nowrap="" class="sub">사회·문화</td>
+<td>5</td>
+<td style="background:#EEEEEE;" data-tooltip="학년제" class="bd_right">6</td>
+<td></td>
+<td class="bd_right"></td>
+<td colspan="2" class="cols" style="background:#C0CDEF;cursor:pointer;" data-tooltip="과목 선택(수정)하기">[택3]</td>
+<td></td>
+<td style="background:#;" class="bd_right"></td>
+<td></td>
+<td rowspan="10">18</td>
+<td></td></tr>
+<tr style="text-align:center;">
+<td style="background:#EFF7FC;">사회</td>
+<td style="background:#EFF7FC;">일반</td>
+<td nowrap="" class="sub">윤리와 사상</td>
+<td>5</td>
+<td style="background:#EEEEEE;" data-tooltip="학년제" class="bd_right">6</td>
+<td></td>
+<td class="bd_right"></td>
+<td style="background:#C0CDEF;cursor:pointer;" data-tooltip="과목 선택(수정)하기"></td>
+<td style="background:#C0CDEF;cursor:pointer;" data-tooltip="과목 선택(수정)하기" class="bd_right"></td>
+<td></td>
+<td style="background:#;" class="bd_right"></td>
+<td></td>
+<td></td></tr>
+<tr style="text-align:center;">
+<td style="background:#EFF7FC;">사회</td>
+<td style="background:#EFF7FC;">일반</td>
+<td nowrap="" class="sub">경제</td>
+<td>5</td>
+<td style="background:#EEEEEE;" data-tooltip="학년제" class="bd_right">6</td>
+<td></td>
+<td class="bd_right"></td>
+<td style="background:#C0CDEF;cursor:pointer;" data-tooltip="과목 선택(수정)하기"></td>
+<td style="background:#C0CDEF;cursor:pointer;" data-tooltip="과목 선택(수정)하기" class="bd_right"></td>
+<td></td>
+<td style="background:#;" class="bd_right"></td>
+<td></td>
+<td></td></tr>
+<tr style="text-align:center;">
+<td style="background:#EFF7FC;">사회</td>
+<td style="background:#EFF7FC;">일반</td>
+<td nowrap="" class="sub">세계사</td>
+<td>5</td>
+<td style="background:#EEEEEE;" data-tooltip="학년제" class="bd_right">6</td>
+<td></td>
+<td class="bd_right"></td>
+<td style="background:#C0CDEF;cursor:pointer;" data-tooltip="과목 선택(수정)하기"></td>
+<td style="background:#C0CDEF;cursor:pointer;" data-tooltip="과목 선택(수정)하기" class="bd_right"></td>
+<td></td>
+<td style="background:#;" class="bd_right"></td>
+<td></td>
+<td></td></tr>
+<tr style="text-align:center;">
+<td style="background:#EFF7FC;">사회</td>
+<td style="background:#EFF7FC;">일반</td>
+<td nowrap="" class="sub">한국지리</td>
+<td>5</td>
+<td style="background:#EEEEEE;" data-tooltip="학년제" class="bd_right">6</td>
+<td></td>
+<td class="bd_right"></td>
+<td style="background:#C0CDEF;cursor:pointer;" data-tooltip="과목 선택(수정)하기"></td>
+<td style="background:#C0CDEF;cursor:pointer;" data-tooltip="과목 선택(수정)하기" class="bd_right"></td>
+<td></td>
+<td style="background:#;" class="bd_right"></td>
+<td></td>
+<td></td></tr>
+<tr style="text-align:center;">
+<td style="background:#EFF7FC;">과학</td>
+<td style="background:#EFF7FC;">일반</td>
+<td nowrap="" class="sub">물리학Ⅰ</td>
+<td>5</td>
+<td style="background:#EEEEEE;" data-tooltip="학년제" class="bd_right">6</td>
+<td></td>
+<td class="bd_right"></td>
+<td style="background:#C0CDEF;cursor:pointer;" data-tooltip="과목 선택(수정)하기"></td>
+<td style="background:#C0CDEF;cursor:pointer;" data-tooltip="과목 선택(수정)하기" class="bd_right"></td>
+<td></td>
+<td style="background:#;" class="bd_right"></td>
+<td></td>
+<td></td></tr>
+<tr style="text-align:center;">
+<td style="background:#EFF7FC;">과학</td>
+<td style="background:#EFF7FC;">일반</td>
+<td nowrap="" class="sub">화학Ⅰ</td>
+<td>5</td>
+<td style="background:#EEEEEE;" data-tooltip="학년제" class="bd_right">6</td>
+<td></td>
+<td class="bd_right"></td>
+<td style="background:#C0CDEF;cursor:pointer;" data-tooltip="과목 선택(수정)하기"></td>
+<td style="background:#C0CDEF;cursor:pointer;" data-tooltip="과목 선택(수정)하기" class="bd_right"></td>
+<td></td>
+<td style="background:#;" class="bd_right"></td>
+<td></td>
+<td></td></tr>
+<tr style="text-align:center;">
+<td style="background:#EFF7FC;">과학</td>
+<td style="background:#EFF7FC;">일반</td>
+<td nowrap="" class="sub">생명과학Ⅰ</td>
+<td>5</td>
+<td style="background:#EEEEEE;" data-tooltip="학년제" class="bd_right">6</td>
+<td></td>
+<td class="bd_right"></td>
+<td style="background:#C0CDEF;cursor:pointer;" data-tooltip="과목 선택(수정)하기"></td>
+<td style="background:#C0CDEF;cursor:pointer;" data-tooltip="과목 선택(수정)하기" class="bd_right"></td>
+<td></td>
+<td style="background:#;" class="bd_right"></td>
+<td></td>
+<td></td></tr>
+<tr style="text-align:center;">
+<td style="background:#EFF7FC;">과학</td>
+<td style="background:#EFF7FC;">일반</td>
+<td nowrap="" class="sub">지구과학Ⅰ</td>
+<td>5</td>
+<td style="background:#EEEEEE;" data-tooltip="학년제" class="bd_right">6</td>
+<td></td>
+<td class="bd_right"></td>
+<td style="background:#C0CDEF;cursor:pointer;" data-tooltip="과목 선택(수정)하기"></td>
+<td style="background:#C0CDEF;cursor:pointer;" data-tooltip="과목 선택(수정)하기" class="bd_right"></td>
+<td></td>
+<td style="background:#;" class="bd_right"></td>
+<td></td>
+<td></td></tr>
+<tr style="text-align:center;">
+<td style="background:#EFF7FC;">기술가정</td>
+<td style="background:#EFF7FC;">진로</td>
+<td nowrap="" class="sub">인공지능 기초</td>
+<td>5</td>
+<td style="background:#EEEEEE;" data-tooltip="학년제" class="bd_right">6</td>
+<td></td>
+<td class="bd_right"></td>
+<td style="background:#C0CDEF;cursor:pointer;" data-tooltip="과목 선택(수정)하기"></td>
+<td style="background:#C0CDEF;cursor:pointer;" data-tooltip="과목 선택(수정)하기" class="bd_right"></td>
+<td></td>
+<td style="background:#;" class="bd_right"></td>
+<td></td>
+<td></td></tr>
+<tr style="text-align:center;">
+<td style="background:#EFF7FC;">수학</td>
+<td style="background:#EFF7FC;">진로</td>
+<td nowrap="" class="sub">수학과제 탐구</td>
+<td>5</td>
+<td style="background:#EEEEEE;" data-tooltip="학년제" class="bd_right">6</td>
+<td></td>
+<td class="bd_right"></td>
+<td></td>
+<td class="bd_right"></td>
+<td colspan="2" class="cols" style="background:#C49DD6;cursor:pointer;" data-tooltip="과목 선택(수정)하기">[택1]</td>
+<td></td>
+<td rowspan="9">6</td>
+<td></td></tr>
+<tr style="text-align:center;">
+<td style="background:#EFF7FC;">수학</td>
+<td style="background:#EFF7FC;">진로</td>
+<td nowrap="" class="sub">경제 수학</td>
+<td>5</td>
+<td style="background:#EEEEEE;" data-tooltip="학년제" class="bd_right">6</td>
+<td></td>
+<td class="bd_right"></td>
+<td></td>
+<td class="bd_right"></td>
+<td style="background:#C49DD6;cursor:pointer;" data-tooltip="과목 선택(수정)하기"></td>
+<td style="background:#C49DD6;cursor:pointer;" data-tooltip="과목 선택(수정)하기" class="bd_right"></td>
+<td></td>
+<td></td></tr>
+<tr style="text-align:center;">
+<td style="background:#EFF7FC;">과학</td>
+<td style="background:#EFF7FC;">진로</td>
+<td nowrap="" class="sub">과학과제 연구</td>
+<td>5</td>
+<td style="background:#EEEEEE;" data-tooltip="학년제" class="bd_right">6</td>
+<td></td>
+<td class="bd_right"></td>
+<td></td>
+<td class="bd_right"></td>
+<td style="background:#C49DD6;cursor:pointer;" data-tooltip="과목 선택(수정)하기"></td>
+<td style="background:#C49DD6;cursor:pointer;" data-tooltip="과목 선택(수정)하기" class="bd_right"></td>
+<td></td>
+<td></td></tr>
+<tr style="text-align:center;">
+<td style="background:#EFF7FC;">사회</td>
+<td style="background:#EFF7FC;">진로</td>
+<td nowrap="" class="sub">사회문제 탐구</td>
+<td>5</td>
+<td style="background:#EEEEEE;" data-tooltip="학년제" class="bd_right">6</td>
+<td></td>
+<td class="bd_right"></td>
+<td></td>
+<td class="bd_right"></td>
+<td style="background:#C49DD6;cursor:pointer;" data-tooltip="과목 선택(수정)하기"></td>
+<td style="background:#C49DD6;cursor:pointer;" data-tooltip="과목 선택(수정)하기" class="bd_right"></td>
+<td></td>
+<td></td></tr>
+<tr style="text-align:center;">
+<td style="background:#EFF7FC;">제2외국어</td>
+<td style="background:#EFF7FC;">진로</td>
+<td nowrap="" class="sub">중국 문화</td>
+<td>5</td>
+<td style="background:#EEEEEE;" data-tooltip="학년제" class="bd_right">6</td>
+<td></td>
+<td class="bd_right"></td>
+<td></td>
+<td class="bd_right"></td>
+<td style="background:#C49DD6;cursor:pointer;" data-tooltip="과목 선택(수정)하기"></td>
+<td style="background:#C49DD6;cursor:pointer;" data-tooltip="과목 선택(수정)하기" class="bd_right"></td>
+<td></td>
+<td></td></tr>
+<tr style="text-align:center;">
+<td style="background:#EFF7FC;">제2외국어</td>
+<td style="background:#EFF7FC;">진로</td>
+<td nowrap="" class="sub">일본 문화</td>
+<td>5</td>
+<td style="background:#EEEEEE;" data-tooltip="학년제" class="bd_right">6</td>
+<td></td>
+<td class="bd_right"></td>
+<td></td>
+<td class="bd_right"></td>
+<td style="background:#C49DD6;cursor:pointer;" data-tooltip="과목 선택(수정)하기"></td>
+<td style="background:#C49DD6;cursor:pointer;" data-tooltip="과목 선택(수정)하기" class="bd_right"></td>
+<td></td>
+<td></td></tr>
+<tr style="text-align:center;">
+<td style="background:#EFF7FC;">교양</td>
+<td style="background:#EFF7FC;">일반</td>
+<td nowrap="" class="sub">환경</td>
+<td>5</td>
+<td style="background:#EEEEEE;" data-tooltip="학년제" class="bd_right">6</td>
+<td></td>
+<td class="bd_right"></td>
+<td></td>
+<td class="bd_right"></td>
+<td style="background:#C49DD6;cursor:pointer;" data-tooltip="과목 선택(수정)하기"></td>
+<td style="background:#C49DD6;cursor:pointer;" data-tooltip="과목 선택(수정)하기" class="bd_right"></td>
+<td></td>
+<td></td></tr>
+<tr style="text-align:center;">
+<td style="background:#EFF7FC;">기술가정</td>
+<td style="background:#EFF7FC;">진로</td>
+<td nowrap="" class="sub">정보과학</td>
+<td>5</td>
+<td style="background:#EEEEEE;" data-tooltip="학년제" class="bd_right">6</td>
+<td></td>
+<td class="bd_right"></td>
+<td></td>
+<td class="bd_right"></td>
+<td style="background:#C49DD6;cursor:pointer;" data-tooltip="과목 선택(수정)하기"></td>
+<td style="background:#C49DD6;cursor:pointer;" data-tooltip="과목 선택(수정)하기" class="bd_right"></td>
+<td></td>
+<td></td></tr>
+<tr style="text-align:center;">
+<td style="background:#EFF7FC;">체육</td>
+<td style="background:#EFF7FC;">진로</td>
+<td nowrap="" class="sub">체육 전공 실기 기초</td>
+<td>5</td>
+<td style="background:#EEEEEE;" data-tooltip="학년제" class="bd_right">6</td>
+<td></td>
+<td class="bd_right"></td>
+<td></td>
+<td class="bd_right"></td>
+<td style="background:#C49DD6;cursor:pointer;" data-tooltip="과목 선택(수정)하기"></td>
+<td style="background:#C49DD6;cursor:pointer;" data-tooltip="과목 선택(수정)하기" class="bd_right"></td>
+<td></td>
+<td></td></tr>
+            <tr style="text-align:center;">
+                <td colspan="5" style="background:#EFF7FC;">합계</td>
+                <td></td>
+                <td></td>
+                <td class="bd_left">29</td>
+                <td>28</td>
+                <td class="bd_left">15</td>
+                <td>15</td>
+                <td class="bd_left">2</td>
+                <td class="bd_right">2</td>
+                <td></td>
+                <td>91</td>
+                <td></td>
+            </tr>
+            <tr style="text-align:center;">
+                <td colspan="5" style="background:#EFF7FC;">과목 수</td>
+                <td></td>
+                <td></td>
+                <td class="bd_left">11</td>
+                <td>10</td>
+                <td class="bd_left">5</td>
+                <td>5</td>
+                <td class="bd_left">1</td>
+                <td class="bd_right">1</td>
+                <td></td>
+                <td>33</td>
+                <td></td>
+            </tr>
+            </tbody></table>
