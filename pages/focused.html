@@ -1,0 +1,57 @@
+<!--진로 명확한 애들 검색 화면-->
+
+<!Doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="2026드림팀">
+        <title>선택과목 가이드</title>
+    </head>
+    <body>
+        <script src="../main.js"></script>
+        <!--main.js에 dropdown클래스에 대해서 
+        dropdown-button누르면 dropdown-menu보여주게-->
+
+        <div id="search">
+            <!--학교 선택-->
+            <div class="dropdown" id="select-univ">
+                <button class="dropdown-button">대학 선택(선택)</button>
+                <div class="dropdown-menu" hidden>
+                    <!--여기에 이제 대학 목록 체크박스로 넣는 코드-->
+                    <!--<label class="univ"><input type="checkbox"> 대학1</label> 이런 느낌?-->
+                </div>
+            </div>
+
+            <!--계열 선택-->
+            <div class="dropdown" id="select-dicipline">
+                <button class="dropdown-button">계열 선택</button>
+                <div class="dropdown-menu" hidden>
+                    <!--여기에 이제 계열 목록 체크박스로 넣는 코드-->
+                </div>
+            </div>
+
+            <!--학과 선택-->
+            <div class="dropdown" id="select-major">
+                <button class="dropdown-button">학과 선택</button>
+                <div class="dropdown-menu" hidden>
+                    <!--여기에 이제 학과 목록 체크박스로 넣는 코드-->
+                </div>
+            </div>
+
+            <!--중요한건 이제 학교나 계열 선택시 학과 선택했던거 초기화-->
+            <!--학교, 게열에 맞게 학과 리스트 다시 세팅-->
+            <button id="search-button">검색</button>
+        </div>
+
+        <!--검색하면 hidden 풀리게 js짜기-->
+        <div id="view-result" hidden>
+            <h4>핵심 권장 과목</h4>
+            <div id="subjects-recommend">
+                <!-- 여기에 권장 과목들이 표시될 예정 -->
+                <!--아래에 있는 형식으로 js짜기-->
+                <div class="subject-tag"></div>
+            </div>
+        </div>
+    </body>
+</html>
