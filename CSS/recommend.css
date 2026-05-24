@@ -1,0 +1,14 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#search {
+    display: flex;
+    justify-content: center;
+    border : 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 10px;
+}
