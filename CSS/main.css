@@ -1,0 +1,76 @@
+body {
+    background: #e3f3cc;
+    font-family: sans-serif;
+    padding: 40px;
+}
+
+h4 {
+    font-size: 30px;
+    margin-bottom: 40px;
+    color: #222200;
+}
+
+.grade-select {
+
+    width: 220px;
+
+    padding: 14px;
+
+    border: none;
+    border-radius: 12px;
+
+    background: white;
+
+    font-size: 16px;
+
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+
+    cursor: pointer;
+
+    outline: none;
+
+    transition: 0.3s;
+}
+
+.grade-select:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.home-menu-button {
+
+    display: block;
+
+    width: 200px;
+
+    background: white;
+
+    color: #222200;
+
+    padding: 18px;
+
+    margin-top: 15px;
+
+    font-weight: 600;
+
+    border-radius: 14px;
+
+    text-decoration: none;
+
+    box-shadow: 0 5px 8px rgba(0,0,0,0.08);
+
+    transition: 0.3s;
+}
+
+.home-menu-button:hover {
+
+    transform: translateY(-3px);
+
+    background: #2f5246;
+
+    color: white;
+
+    box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+}

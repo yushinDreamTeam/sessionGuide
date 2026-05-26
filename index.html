@@ -1,27 +1,32 @@
 <!DOCTYPE html>
 <html lang="ko">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="author" content="2026드림팀">
-        <title>선택과목 가이드</title>
-    </head>
-    <body>
-        <h4>유신고 선택과목 가이드</h4>
-        <!-- 학년 선택 데이터는 여기서 불러오면 됨.-->
-         <!--로컬 스토리지에서 변수 관리하면서 JS로 초기값은 로컬 스토리지에서 불러오기-->
-        <select name="grade">
-            <option value="1">1학년</option>
-            <option value="2">2학년</option>
-            <option value="3">3학년</option>
-        </select>
-        <br>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="2026드림팀">
+    <title>선택과목 가이드</title>
 
-        <!--네비게이션 메뉴인데, 여기는 딱히 할 일 없음-->
+    <link rel="stylesheet" href="CSS/main.css">
+</head>
+
+<body>
+
+    <h4>유신고 선택과목 가이드</h4>
+    <!-- 학년 선택 데이터는 여기서 불러오면 됨.-->
+         <!--로컬 스토리지에서 변수 관리하면서 JS로 초기값은 로컬 스토리지에서 불러오기-->
+
+    <select class="grade-select">
+        <option>1학년</option>
+        <option>2학년</option>
+        <option>3학년</option>
+    </select>
+     <br>
+         <!--네비게이션 메뉴인데, 여기는 딱히 할 일 없음-->
         <a href="pages/focused.html" class="home-menu-button">진로 명확한 애들</a>
         <br>
         <a href="pages/unfocused.html" class="home-menu-button">진로가 명확하지 않은 애들</a>
         <br>
         <a href="pages/curriculum.html" class="home-menu-button">우리학교 편제표 보기</a>
+        <script src="JS/main.js"defer></script>
     </body>
 </html>
