@@ -7,9 +7,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="author" content="2026드림팀">
         <title>선택과목 가이드</title>
+      <link rel="stylesheet" href="./preview.css">
     </head>
     <body>
-        <script src="../main.js"></script>
+        <script src="../main.js" defer></script>
         <!--main.js에 dropdown클래스에 대해서 
         dropdown-button누르면 dropdown-menu보여주게-->
 
@@ -18,6 +19,8 @@
             <div class="dropdown" id="select-univ">
                 <button class="dropdown-button">대학 선택(선택)</button>
                 <div class="dropdown-menu" hidden>
+                  <label class="univ"><input type="checkbox"> 대학1</label>
+                  <label class="univ"><input type="checkbox"> 대학2</label>
                     <!--여기에 이제 대학 목록 체크박스로 넣는 코드-->
                     <!--<label class="univ"><input type="checkbox"> 대학1</label> 이런 느낌?-->
                 </div>
@@ -27,6 +30,7 @@
             <div class="dropdown" id="select-dicipline">
                 <button class="dropdown-button">계열 선택</button>
                 <div class="dropdown-menu" hidden>
+                  <label class="univ"><input type="checkbox"> 계열1</label>
                     <!--여기에 이제 계열 목록 체크박스로 넣는 코드-->
                 </div>
             </div>
@@ -35,6 +39,12 @@
             <div class="dropdown" id="select-major">
                 <button class="dropdown-button">학과 선택</button>
                 <div class="dropdown-menu" hidden>
+                  <label class="univ">
+                    <input type="checkbox" value="학과1"> 학과1
+                  </label>
+                  <label class="univ">
+                    <input type="checkbox" value="학과2"> 학과2
+                  </label>
                     <!--여기에 이제 학과 목록 체크박스로 넣는 코드-->
                 </div>
             </div>
