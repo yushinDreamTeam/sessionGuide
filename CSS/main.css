@@ -74,3 +74,25 @@ h4 {
 
     box-shadow: 0 8px 30px rgba(0,0,0,0.15);
 }
+
+
+.home-menu-button:active {
+    transform: translateY(0px);
+}
+
+@media (max-width: 768px) {
+
+    body {
+        padding: 25px;
+    }
+
+    h4 {
+        font-size: 28px;
+    }
+
+    .grade-select,
+    .home-menu-button {
+
+        max-width: none;
+    }
+}
