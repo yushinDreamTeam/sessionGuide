@@ -1,0 +1,241 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding: 48px 20px 120px;
+  background: #f4efe5;
+  color: #222;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+#grade-label {
+  width: min(760px, 100%);
+  margin: 0 auto 12px;
+  font-size: 15px;
+  color: #555;
+}
+
+h4 {
+  width: min(760px, 100%);
+  margin: 0 auto 8px;
+  font-size: 26px;
+  letter-spacing: -0.03em;
+}
+
+#intro {
+  width: min(760px, 100%);
+  margin: 0 auto 28px;
+  color: #6b6b60;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.abs-note {
+  color: #c0392b;
+  font-weight: 600;
+}
+
+#curriculum-form {
+  width: min(760px, 100%);
+  margin: 0 auto;
+}
+
+.empty-msg {
+  padding: 40px 24px;
+  background: #fff;
+  border: 2px solid #222;
+  border-radius: 20px;
+  text-align: center;
+  font-weight: 600;
+  line-height: 1.6;
+  box-shadow: 6px 6px 0 #222;
+}
+
+/* 학기 헤더 */
+.term-header {
+  margin: 34px 0 14px;
+  padding: 8px 16px;
+  display: inline-block;
+  background: #222;
+  color: #fff;
+  border-radius: 999px;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+/* 질문 카드 */
+.q-card {
+  margin-bottom: 16px;
+  padding: 20px 22px;
+  background: #fff;
+  border: 2px solid #222;
+  border-radius: 20px;
+  box-shadow: 5px 5px 0 #222;
+  transition: box-shadow 0.12s ease, transform 0.12s ease;
+}
+
+.q-card.done {
+  box-shadow: 5px 5px 0 #2f7d4f;
+  border-color: #2f7d4f;
+}
+
+.q-card.shake {
+  animation: shake 0.3s;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+
+.q-head {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 14px;
+  padding-bottom: 12px;
+  border-bottom: 2px dashed #ddd;
+}
+
+.q-no {
+  font-size: 26px;
+  font-weight: 900;
+  color: #c9c2b4;
+  letter-spacing: -0.02em;
+}
+
+.q-title {
+  font-size: 17px;
+  font-weight: 800;
+}
+
+.q-pick {
+  margin-left: 4px;
+  color: #c0392b;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.q-credit {
+  margin-left: 8px;
+  color: #999;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.q-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 8px;
+}
+
+.opt {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 14px;
+  border: 2px solid #e5ddcd;
+  border-radius: 14px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  transition: background 0.12s ease, border-color 0.12s ease;
+}
+
+.opt:hover {
+  background: #faf6ec;
+  border-color: #cbb;
+}
+
+.opt input {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 auto;
+  accent-color: #222;
+}
+
+.opt:has(input:checked) {
+  background: #f1eadc;
+  border-color: #222;
+}
+
+.opt .abs {
+  color: #c0392b;
+}
+
+/* 하단 고정 바 */
+#footer-bar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 16px 20px;
+  background: rgba(255, 250, 240, 0.96);
+  border-top: 2px solid #222;
+  backdrop-filter: blur(4px);
+}
+
+#pick-status {
+  font-weight: 800;
+  font-size: 15px;
+  color: #666;
+}
+
+#pick-status.all-done {
+  color: #2f7d4f;
+}
+
+#save-button {
+  min-height: 48px;
+  padding: 12px 26px;
+  background: #222;
+  color: #fff;
+  border: 2px solid #222;
+  border-radius: 16px;
+  cursor: pointer;
+  font-weight: 800;
+  transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
+}
+
+#save-button:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 4px 4px 0 #555;
+  background: #333;
+}
+
+#save-button:active {
+  transform: translate(0, 0);
+  box-shadow: none;
+}
+
+@media (max-width: 560px) {
+  body {
+    padding: 28px 14px 110px;
+  }
+
+  .q-options {
+    grid-template-columns: 1fr;
+  }
+
+  #footer-bar {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

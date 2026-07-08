@@ -1,3 +1,28 @@
-<!--사용자가 입력한대로 유신고 형식에 맞게 표현-->
+<!--우리학교 편제표 : 학년별 개별 선택과목을 임시로 선택해보는 폼-->
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="2026드림팀">
+        <title>선택과목 가이드</title>
+        <link rel="stylesheet" href="curriculum.css">
+    </head>
+    <body>
+        <script src="data.js"></script>
+        <script src="curriculum.js" defer></script>
 
-<!--얘는 반응형으로 안할거면 굳이 js필요 없으니까 나중에 하는걸로-->
+        <p id="grade-label">학년: <strong id="grade-value">-</strong></p>
+        <h4>우리학교 편제표 · 임시 선택</h4>
+        <p id="intro">개설 선택과목을 학기·선택군에 맞게 미리 골라볼 수 있어요. <span class="abs-note">(절대) 표기 과목은 5등급 절대평가입니다.</span></p>
+
+        <form id="curriculum-form">
+            <!-- data.js의 CURRICULUM으로 curriculum.js가 질문을 채운다 -->
+        </form>
+
+        <div id="footer-bar">
+            <span id="pick-status"></span>
+            <button type="button" id="save-button">임시 선택 저장</button>
+        </div>
+    </body>
+</html>

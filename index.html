@@ -5,27 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="2026드림팀">
     <title>선택과목 가이드</title>
-
+    <link rel="stylesheet" href="main.css">
 </head>
 
 <body>
+    <main class="home">
+        <header class="home-header">
+            <span class="home-badge">유신고 · 2026 드림팀</span>
+            <h1 class="home-title">선택과목 가이드</h1>
+            <p class="home-subtitle">내 진로에 맞는 고교 선택과목을, 우리학교 편제표 기준으로 찾아보세요.</p>
+        </header>
 
-    <h4>유신고 선택과목 가이드</h4>
-    <!-- 학년 선택 데이터는 여기서 불러오면 됨.-->
-         <!--로컬 스토리지에서 변수 관리하면서 JS로 초기값은 로컬 스토리지에서 불러오기-->
+        <!-- 학년 선택 : localStorage(selectedGrade)에 저장됨 (main.js) -->
+        <section class="grade-card">
+            <label for="grade" class="grade-label">학년 선택</label>
+            <p class="grade-desc">학년에 따라 개설 과목이 달라져요.</p>
+            <select id="grade" class="grade-select">
+                <option>1학년</option>
+                <option>2학년</option>
+                <option>3학년</option>
+            </select>
+        </section>
 
-    <select class="grade-select">
-        <option>1학년</option>
-        <option>2학년</option>
-        <option>3학년</option>
-    </select>
-     <br>
-         <!--네비게이션 메뉴인데, 여기는 딱히 할 일 없음-->
-        <a href="focused.html" class="home-menu-button">진로 명확한 애들</a>
-        <br>
-        <a href="unfocused.html" class="home-menu-button">진로가 명확하지 않은 애들</a>
-        <br>
-        <a href="curriculum.html" class="home-menu-button">우리학교 편제표 보기</a>
-        <script src="main.js"defer></script>
-    </body>
+        <!-- 네비게이션 -->
+        <nav class="home-nav">
+            <a href="focused.html" class="home-menu-button">
+                <span class="menu-icon">🎯</span>
+                <span class="menu-text">
+                    <span class="menu-title">진로가 명확해요</span>
+                    <span class="menu-desc">희망 계열·학과·대학으로 권장 과목 찾기</span>
+                </span>
+                <span class="menu-arrow">→</span>
+            </a>
+
+            <a href="unfocused.html" class="home-menu-button">
+                <span class="menu-icon">🧭</span>
+                <span class="menu-text">
+                    <span class="menu-title">아직 진로를 못 정했어요</span>
+                    <span class="menu-desc">계열별 주요 권장 과목 둘러보기</span>
+                </span>
+                <span class="menu-arrow">→</span>
+            </a>
+
+            <a href="curriculum.html" class="home-menu-button">
+                <span class="menu-icon">📋</span>
+                <span class="menu-text">
+                    <span class="menu-title">우리학교 편제표 보기</span>
+                    <span class="menu-desc">유신고에서 열리는 과목 한눈에 보기</span>
+                </span>
+                <span class="menu-arrow">→</span>
+            </a>
+        </nav>
+    </main>
+
+    <script src="main.js" defer></script>
+</body>
 </html>

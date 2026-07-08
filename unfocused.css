@@ -11,103 +11,12 @@ body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
-button,
-input {
+button {
   font: inherit;
 }
 
 [hidden] {
   display: none !important;
-}
-
-#search {
-  width: min(900px, 100%);
-  margin: 0 auto;
-  padding: 28px;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(180px, 1fr));
-  gap: 16px;
-  background: #fffaf0;
-  border: 2px solid #222;
-  border-radius: 28px;
-  box-shadow: 8px 8px 0 #222;
-}
-
-.dropdown {
-  position: relative;
-}
-
-.dropdown-button {
-  width: 100%;
-  min-height: 56px;
-  padding: 12px 16px;
-  background: #fff;
-  color: #222;
-  border: 2px solid #222;
-  border-radius: 18px;
-  cursor: pointer;
-  text-align: left;
-  font-weight: 700;
-  transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
-}
-
-.dropdown-button:hover {
-  transform: translate(-2px, -2px);
-  box-shadow: 4px 4px 0 #222;
-  background: #fffdf8;
-}
-
-.dropdown-button:active {
-  transform: translate(0, 0);
-  box-shadow: none;
-}
-
-.dropdown-button::after {
-  content: ">";
-  float: right;
-  font-size: 18px;
-}
-
-.dropdown-menu {
-  position: absolute;
-  z-index: 30;
-  top: calc(100% + 8px);
-  left: 0;
-  width: 100%;
-  max-height: 260px;
-  overflow-y: auto;
-  padding: 10px;
-  background: #fff;
-  border: 2px solid #222;
-  border-radius: 18px;
-  box-shadow: 6px 6px 0 #222;
-}
-
-.menu-item {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  min-height: 40px;
-  padding: 9px 10px;
-  border-radius: 12px;
-  cursor: pointer;
-  font-weight: 600;
-}
-
-.menu-item:hover {
-  background: #f1eadc;
-}
-
-.menu-item input {
-  width: 17px;
-  height: 17px;
-  accent-color: #222;
-}
-
-.menu-hint {
-  margin: 6px 8px;
-  color: #888;
-  font-size: 14px;
 }
 
 #grade-label {
@@ -117,44 +26,58 @@ input {
   color: #555;
 }
 
-#search-button {
-  grid-column: 1 / -1;
-  min-height: 56px;
-  padding: 12px 18px;
-  background: #222;
-  color: #fff;
+h4 {
+  width: min(900px, 100%);
+  margin: 0 auto 20px;
+  font-size: 26px;
+  letter-spacing: -0.03em;
+}
+
+/* ---------- 계열 탭 ---------- */
+#discipline-tabs {
+  width: min(900px, 100%);
+  margin: 0 auto 24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+#discipline-tabs .tab,
+#discipline-tabs .tab-active {
+  min-height: 46px;
+  padding: 10px 18px;
   border: 2px solid #222;
-  border-radius: 18px;
+  border-radius: 999px;
   cursor: pointer;
-  font-weight: 800;
+  font-weight: 700;
   transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
 }
 
-#search-button:hover {
+#discipline-tabs .tab {
+  background: #fff;
+  color: #222;
+}
+
+#discipline-tabs .tab:hover {
   transform: translate(-2px, -2px);
+  box-shadow: 4px 4px 0 #222;
+}
+
+#discipline-tabs .tab-active {
+  background: #222;
+  color: #fff;
   box-shadow: 4px 4px 0 #555;
-  background: #333;
 }
 
-#search-button:active {
-  transform: translate(0, 0);
-  box-shadow: none;
-}
-
+/* ---------- 결과 ---------- */
 #view-result {
   width: min(900px, 100%);
-  margin: 32px auto 0;
+  margin: 0 auto;
   padding: 28px;
   background: #fff;
   border: 2px solid #222;
   border-radius: 28px;
   box-shadow: 8px 8px 0 #222;
-}
-
-#view-result h4 {
-  margin: 0 0 18px;
-  font-size: 24px;
-  letter-spacing: -0.04em;
 }
 
 #result-summary {
@@ -176,10 +99,10 @@ input {
   font-weight: 600;
 }
 
-/* 한 줄 = 한 과목 :  빈도수 | 과목명 | 설명 | 세부정보 */
+/* 한 줄 = 한 과목 :  과목명 | 권장학교 N개 | 세부정보 */
 .subject-row {
   display: grid;
-  grid-template-columns: 150px 130px 1fr 44px;
+  grid-template-columns: 1fr 130px 44px;
   align-items: center;
   gap: 14px;
   padding: 14px 16px;
@@ -187,6 +110,11 @@ input {
   border: 2px solid #222;
   border-radius: 16px;
   box-shadow: 3px 3px 0 #222;
+}
+
+.subject-name {
+  font-size: 17px;
+  font-weight: 800;
 }
 
 .subject-freq {
@@ -200,17 +128,6 @@ input {
   font-size: 13px;
   font-weight: 800;
   white-space: nowrap;
-}
-
-.subject-name {
-  font-size: 17px;
-  font-weight: 800;
-}
-
-.subject-desc {
-  font-size: 14px;
-  color: #555;
-  line-height: 1.4;
 }
 
 .subject-info {
@@ -271,9 +188,9 @@ input {
 }
 
 #modal-title {
+  width: auto;
   margin: 0 0 4px;
   font-size: 22px;
-  letter-spacing: -0.03em;
 }
 
 #modal-subtitle {
@@ -340,50 +257,10 @@ input {
   font-size: 13px;
 }
 
-#select-univ .dropdown-button {
-  background: #fff;
-}
-
-#select-dicipline .dropdown-button {
-  background: #fffdf8;
-}
-
-#select-major .dropdown-button {
-  background: #fff;
-}
-
-#select-univ .dropdown-menu {
-  border-color: #222;
-}
-
-#select-dicipline .dropdown-menu {
-  border-color: #222;
-}
-
-#select-major .dropdown-menu {
-  border-color: #222;
-}
-
+/* ---------- 모바일 ---------- */
 @media (max-width: 760px) {
   body {
     padding: 24px 12px;
-  }
-
-  #search {
-    grid-template-columns: 1fr;
-    padding: 20px;
-    border-radius: 22px;
-    box-shadow: 5px 5px 0 #222;
-  }
-
-  #search-button {
-    grid-column: auto;
-  }
-
-  .dropdown-menu {
-    position: static;
-    margin-top: 8px;
-    box-shadow: none;
   }
 
   #view-result {
@@ -392,30 +269,21 @@ input {
     box-shadow: 5px 5px 0 #222;
   }
 
-  #view-result h4 {
-    font-size: 21px;
-  }
-
   .subject-row {
-    grid-template-columns: 1fr 40px;
+    grid-template-columns: 1fr 44px;
     grid-template-areas:
-      "freq info"
       "name info"
-      "desc desc";
+      "freq info";
     gap: 8px;
-  }
-
-  .subject-freq {
-    grid-area: freq;
-    justify-self: start;
   }
 
   .subject-name {
     grid-area: name;
   }
 
-  .subject-desc {
-    grid-area: desc;
+  .subject-freq {
+    grid-area: freq;
+    justify-self: start;
   }
 
   .subject-info {
