@@ -218,8 +218,8 @@ function makeSubjectRow(entry) {
 
   // 빈도수
   const freq = document.createElement("span");
-  freq.className = "subject-freq";
-  freq.textContent = `${entry.count}개 학과에서 권장`;
+  //freq.className = "subject-freq";
+  //freq.textContent = `${entry.count}개 학과에서 권장`;
 
   // 과목명
   const name = document.createElement("span");
@@ -229,7 +229,7 @@ function makeSubjectRow(entry) {
   // 설명
   const desc = document.createElement("span");
   desc.className = "subject-desc";
-  desc.textContent = (SUBJECTS[entry.subject] || {}).description || "";
+  //desc.textContent = (SUBJECTS[entry.subject] || {}).description || "";
 
   // 세부정보 버튼
   const info = document.createElement("button");
