@@ -1,98 +1,198 @@
-body {
-    background: #e3f3cc;
-    font-family: sans-serif;
-    padding: 40px;
+* {
+  box-sizing: border-box;
 }
 
-h4 {
-    font-size: 30px;
-    margin-bottom: 40px;
-    color: #222200;
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 20px;
+  background: #f4efe5;
+  color: #222;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+select {
+  font: inherit;
+}
+
+/* ---------- 레이아웃 ---------- */
+.home {
+  width: min(560px, 100%);
+}
+
+/* ---------- 헤더 ---------- */
+.home-header {
+  margin-bottom: 28px;
+}
+
+.home-badge {
+  display: inline-block;
+  padding: 6px 14px;
+  background: #222;
+  color: #fff;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+.home-title {
+  margin: 16px 0 10px;
+  font-size: 44px;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+}
+
+.home-subtitle {
+  margin: 0;
+  max-width: 42ch;
+  color: #5b5b52;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* ---------- 학년 선택 카드 ---------- */
+.grade-card {
+  margin-bottom: 24px;
+  padding: 22px 24px;
+  background: #fffaf0;
+  border: 2px solid #222;
+  border-radius: 24px;
+  box-shadow: 6px 6px 0 #222;
+}
+
+.grade-label {
+  display: block;
+  font-size: 17px;
+  font-weight: 800;
+}
+
+.grade-desc {
+  margin: 4px 0 16px;
+  color: #6b6b60;
+  font-size: 14px;
 }
 
 .grade-select {
-
-    width: 220px;
-
-    padding: 14px;
-
-    border: none;
-    border-radius: 12px;
-
-    background: white;
-
-    font-size: 16px;
-
-    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-
-    cursor: pointer;
-
-    outline: none;
-
-    transition: 0.3s;
+  width: 100%;
+  padding: 14px 16px;
+  background: #fff;
+  color: #222;
+  border: 2px solid #222;
+  border-radius: 16px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  outline: none;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
 }
 
 .grade-select:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 4px 4px 0 #222;
+}
 
-    transform: translateY(-2px);
+.grade-select:focus-visible {
+  box-shadow: 4px 4px 0 #222;
+}
 
-    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+/* ---------- 네비게이션 ---------- */
+.home-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
 }
 
 .home-menu-button {
-
-    display: block;
-
-    width: 200px;
-
-    background: white;
-
-    color: #222200;
-
-    padding: 18px;
-
-    margin-top: 15px;
-
-    font-weight: 600;
-
-    border-radius: 14px;
-
-    text-decoration: none;
-
-    box-shadow: 0 5px 8px rgba(0,0,0,0.08);
-
-    transition: 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 20px;
+  background: #fff;
+  color: #222;
+  border: 2px solid #222;
+  border-radius: 20px;
+  text-decoration: none;
+  box-shadow: 5px 5px 0 #222;
+  transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
 }
 
 .home-menu-button:hover {
-
-    transform: translateY(-3px);
-
-    background: #2f5246;
-
-    color: white;
-
-    box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+  transform: translate(-3px, -3px);
+  box-shadow: 8px 8px 0 #222;
+  background: #fffaf0;
 }
-
 
 .home-menu-button:active {
-    transform: translateY(0px);
+  transform: translate(0, 0);
+  box-shadow: 2px 2px 0 #222;
 }
 
-@media (max-width: 768px) {
+.menu-icon {
+  flex: 0 0 auto;
+  width: 52px;
+  height: 52px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #f1eadc;
+  border: 2px solid #222;
+  border-radius: 16px;
+  font-size: 26px;
+}
 
-    body {
-        padding: 25px;
-    }
+.menu-text {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  flex: 1;
+  min-width: 0;
+}
 
-    h4 {
-        font-size: 28px;
-    }
+.menu-title {
+  font-size: 17px;
+  font-weight: 800;
+}
 
-    .grade-select,
-    .home-menu-button {
+.menu-desc {
+  color: #6b6b60;
+  font-size: 13px;
+  line-height: 1.35;
+}
 
-        max-width: none;
-    }
+.menu-arrow {
+  flex: 0 0 auto;
+  font-size: 22px;
+  font-weight: 900;
+  transition: transform 0.12s ease;
+}
+
+.home-menu-button:hover .menu-arrow {
+  transform: translateX(4px);
+}
+
+/* ---------- 모바일 ---------- */
+@media (max-width: 560px) {
+  body {
+    padding: 32px 16px;
+    align-items: flex-start;
+  }
+
+  .home-title {
+    font-size: 34px;
+  }
+
+  .menu-icon {
+    width: 46px;
+    height: 46px;
+    font-size: 22px;
+  }
+
+  .menu-arrow {
+    display: none;
+  }
 }

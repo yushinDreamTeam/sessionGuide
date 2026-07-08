@@ -7,59 +7,61 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="author" content="2026드림팀">
         <title>선택과목 가이드</title>
+        <link rel="stylesheet" href="focused.css">
     </head>
     <body>
+        <!-- data.js를 먼저 불러온 뒤 focused.js가 사용한다 -->
+        <script src="data.js"></script>
         <script src="focused.js" defer></script>
-        <!--main.js에 dropdown클래스에 대해서 
-        dropdown-button누르면 dropdown-menu보여주게-->
+
+        <p id="grade-label">학년: <strong id="grade-value">-</strong></p>
 
         <div id="search">
-            <!--학교 선택-->
+            <!--대학 선택 (선택 / 복수 선택 가능)-->
             <div class="dropdown" id="select-univ">
-                <button class="dropdown-button">대학 선택(선택)</button>
+                <button type="button" class="dropdown-button">대학 선택 (선택)</button>
                 <div class="dropdown-menu" hidden>
-                  <label class="univ"><input type="checkbox"> 대학1</label>
-                  <label class="univ"><input type="checkbox"> 대학2</label>
-                    <!--여기에 이제 대학 목록 체크박스로 넣는 코드-->
-                    <!--<label class="univ"><input type="checkbox"> 대학1</label> 이런 느낌?-->
+                    <!-- data.js의 UNIVERSITIES로 focused.js가 채운다 -->
                 </div>
             </div>
 
-            <!--계열 선택-->
-            <div class="dropdown" id="select-dicipline">
-                <button class="dropdown-button">계열 선택</button>
+            <!--계열 선택 (필수)-->
+            <div class="dropdown" id="select-faculty">
+                <button type="button" class="dropdown-button">계열 선택</button>
                 <div class="dropdown-menu" hidden>
-                  <label class="univ"><input type="checkbox"> 계열1</label>
-                    <!--여기에 이제 계열 목록 체크박스로 넣는 코드-->
+                    <!-- data.js의 FACULTIES로 focused.js가 채운다 -->
                 </div>
             </div>
 
-            <!--학과 선택-->
+            <!--학과 선택 (필수) : 계열/대학에 맞춰 focused.js가 다시 채운다-->
             <div class="dropdown" id="select-major">
-                <button class="dropdown-button">학과 선택</button>
+                <button type="button" class="dropdown-button">학과 선택</button>
                 <div class="dropdown-menu" hidden>
-                  <label class="univ">
-                    <input type="checkbox" value="학과1"> 학과1
-                  </label>
-                  <label class="univ">
-                    <input type="checkbox" value="학과2"> 학과2
-                  </label>
-                    <!--여기에 이제 학과 목록 체크박스로 넣는 코드-->
+                    <p class="menu-hint">계열을 먼저 선택하세요.</p>
                 </div>
             </div>
 
-            <!--중요한건 이제 학교나 계열 선택시 학과 선택했던거 초기화-->
-            <!--학교, 게열에 맞게 학과 리스트 다시 세팅-->
-            <button id="search-button">검색</button>
+            <button type="button" id="search-button">검색</button>
         </div>
 
-        <!--검색하면 hidden 풀리게 js짜기-->
+        <!--검색하면 hidden 풀리게-->
         <div id="view-result" hidden>
             <h4>핵심 권장 과목</h4>
+            <p id="result-summary"></p>
             <div id="subjects-recommend">
-                <!-- 여기에 권장 과목들이 표시될 예정 -->
-                <!--아래에 있는 형식으로 js짜기-->
-                <div class="subject-tag"></div>
+                <!-- 각 과목 한 줄:  빈도수 | 과목명 | 설명 | 세부정보(i) -->
+            </div>
+        </div>
+
+        <!--세부정보 팝업 (기본 숨김)-->
+        <div id="modal-overlay" hidden>
+            <div id="modal" role="dialog" aria-modal="true">
+                <button type="button" id="modal-close" aria-label="닫기">&times;</button>
+                <h4 id="modal-title">과목명</h4>
+                <p id="modal-subtitle">이 과목을 권장/핵심으로 고른 대학·학과</p>
+                <ul id="modal-school-list">
+                    <!-- 학교로고 | 학교명 | 학과명 -->
+                </ul>
             </div>
         </div>
     </body>
