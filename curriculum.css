@@ -29,17 +29,80 @@ input {
 
 h4 {
   width: min(760px, 100%);
-  margin: 0 auto 8px;
+  margin: 0 auto 16px;
   font-size: 26px;
   letter-spacing: -0.03em;
 }
 
 #intro {
   width: min(760px, 100%);
-  margin: 0 auto 28px;
+  margin: 0 auto 20px;
   color: #6b6b60;
   font-size: 14px;
   line-height: 1.5;
+}
+
+#controls-row {
+  width: min(760px, 100%);
+  margin: 0 auto 20px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#term-selector {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+#legend {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+#term-select {
+  padding: 8px 12px;
+  border: 2px solid #222;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  background: #fff;
+  cursor: pointer;
+}
+
+#term-select:hover {
+  background: #f9f3e6;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.legend-abs {
+  color: #c0392b;
+}
+
+.legend-social {
+  background-color: #f4d03f;
+  color: #333;
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+.legend-science {
+  background-color: #4a90e2;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 6px;
 }
 
 .abs-note {
@@ -174,6 +237,32 @@ h4 {
 
 .opt .abs {
   color: #c0392b;
+}
+.opt .abs.science {
+  background-color: #4a90e2;
+  color: #c0392b;
+  padding: 2px 8px;
+  border-radius: 6px;
+}
+
+.opt .abs.social {
+  background-color: #f4d03f;
+  color: #c0392b;
+  padding: 2px 8px;
+  border-radius: 6px;
+}
+.opt .science {
+  background-color: #85b6ed;
+  color: rgb(0, 0, 0);
+  padding: 2px 8px;
+  border-radius: 6px;
+}
+
+.opt .social {
+  background-color: #f4d03f;
+  color: #333;
+  padding: 2px 8px;
+  border-radius: 6px;
 }
 
 /* 하단 고정 바 */
