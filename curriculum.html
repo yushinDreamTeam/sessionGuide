@@ -13,8 +13,24 @@
         <script src="curriculum.js" defer></script>
 
         <p id="grade-label">학년: <strong id="grade-value">-</strong></p>
-        <h4>우리학교 편제표 · 임시 선택</h4>
-        <p id="intro">개설 선택과목을 학기·선택군에 맞게 미리 골라볼 수 있어요. <span class="abs-note">(절대) 표기 과목은 5등급 절대평가입니다.</span></p>
+        <h4>우리학교 편제표</h4>
+        
+        <div id="controls-row">
+            <div id="term-selector">
+                <label for="term-select">학기 선택:</label>
+                <select id="term-select">
+                    <option value="all">전체</option>
+                    <option value="1학기">1학기</option>
+                    <option value="2학기">2학기</option>
+                </select>
+            </div>
+            
+            <div id="legend">
+                <span class="legend-item"><span class="legend-abs">절대과목</span> 빨간색 글자</span>
+                <span class="legend-item"><span class="legend-social">사회과목</span> 노란 배경</span>
+                <span class="legend-item"><span class="legend-science">과학과목</span> 파란 배경</span>
+            </div>
+        </div>
 
         <form id="curriculum-form">
             <!-- data.js의 CURRICULUM으로 curriculum.js가 질문을 채운다 -->
