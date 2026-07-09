@@ -5,7 +5,7 @@
 body {
   margin: 0;
   min-height: 100vh;
-  padding: 48px 20px;
+  padding: 48px 20px 120px;
   background: #f4efe5;
   color: #222;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -20,14 +20,14 @@ button {
 }
 
 #grade-label {
-  width: min(900px, 100%);
-  margin: 0 auto 16px;
+  width: min(760px, 100%);
+  margin: 0 auto 12px;
   font-size: 15px;
   color: #555;
 }
 
 h4 {
-  width: min(900px, 100%);
+  width: min(760px, 100%);
   margin: 0 auto 20px;
   font-size: 26px;
   letter-spacing: -0.03em;
@@ -35,7 +35,7 @@ h4 {
 
 /* ---------- 계열 탭 ---------- */
 #discipline-tabs {
-  width: min(900px, 100%);
+  width: min(760px, 100%);
   margin: 0 auto 24px;
   display: flex;
   flex-wrap: wrap;
@@ -71,7 +71,7 @@ h4 {
 
 /* ---------- 결과 ---------- */
 #view-result {
-  width: min(900px, 100%);
+  width: min(760px, 100%);
   margin: 0 auto;
   padding: 28px;
   background: #fff;
@@ -81,72 +81,123 @@ h4 {
 }
 
 #result-summary {
-  margin: 0 0 16px;
+  margin: 0 0 20px;
   color: #666;
   font-size: 14px;
-}
-
-#subjects-recommend {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.empty-msg {
-  margin: 0;
-  padding: 8px 0;
-  color: #888;
   font-weight: 600;
 }
 
-/* 한 줄 = 한 과목 :  과목명 | 권장학교 N개 | 세부정보 */
-.subject-row {
-  display: grid;
-  grid-template-columns: 1fr 130px 44px;
-  align-items: center;
-  gap: 14px;
-  padding: 14px 16px;
-  background: #fff;
-  border: 2px solid #222;
-  border-radius: 16px;
-  box-shadow: 3px 3px 0 #222;
+#subjects-recommend {
+  display: block;
 }
 
-.subject-name {
+.empty-msg {
+  padding: 20px;
+  color: #888;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* ---------- 편제표 형식: 학기별·선택과목군별 카드 ---------- */
+.term-header {
+  margin: 28px 0 14px;
+  padding: 8px 16px;
+  display: inline-block;
+  background: #222;
+  color: #fff;
+  border-radius: 999px;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.q-card {
+  margin-bottom: 16px;
+  padding: 20px 22px;
+  background: #fff;
+  border: 2px solid #222;
+  border-radius: 20px;
+  box-shadow: 5px 5px 0 #222;
+}
+
+.q-head {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 14px;
+  padding-bottom: 12px;
+  border-bottom: 2px dashed #ddd;
+}
+
+.q-title {
   font-size: 17px;
   font-weight: 800;
 }
 
-.subject-freq {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 6px 10px;
-  background: #222;
-  color: #fff;
-  border-radius: 999px;
+.q-pick {
+  margin-left: 4px;
+  color: #c0392b;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.q-credit {
+  margin-left: 8px;
+  color: #999;
   font-size: 13px;
-  font-weight: 800;
-  white-space: nowrap;
+  font-weight: 700;
 }
 
-.subject-info {
-  width: 34px;
-  height: 34px;
-  justify-self: end;
-  background: #fff;
-  border: 2px solid #222;
-  border-radius: 999px;
-  font-weight: 800;
-  font-style: italic;
+.q-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 8px;
+}
+
+.opt {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 14px;
+  border: 2px solid #e5ddcd;
+  border-radius: 14px;
   cursor: pointer;
-  transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
+  font-size: 15px;
+  font-weight: 600;
+  transition: background 0.12s ease, border-color 0.12s ease;
 }
 
-.subject-info:hover {
-  transform: translate(-1px, -1px);
-  box-shadow: 2px 2px 0 #222;
-  background: #f1eadc;
+.opt:hover {
+  background: #faf6ec;
+  border-color: #cbb;
+}
+
+.opt span.abs {
+  color: #c0392b;
+  font-weight: 800;
+}
+
+.opt span.science {
+  background-color: #85b6ed;
+  color: #000;
+  padding: 2px 8px;
+  border-radius: 6px;
+}
+
+.opt span.social {
+  background-color: #f4d03f;
+  color: #333;
+  padding: 2px 8px;
+  border-radius: 6px;
+}
+
+.opt span.abs.science {
+  background-color: #4a90e2;
+  color: #c0392b;
+}
+
+.opt span.abs.social {
+  background-color: #f4d03f;
+  color: #c0392b;
 }
 
 /* ---------- 세부정보 팝업 ---------- */
@@ -269,25 +320,7 @@ h4 {
     box-shadow: 5px 5px 0 #222;
   }
 
-  .subject-row {
-    grid-template-columns: 1fr 44px;
-    grid-template-areas:
-      "name info"
-      "freq info";
-    gap: 8px;
-  }
-
-  .subject-name {
-    grid-area: name;
-  }
-
-  .subject-freq {
-    grid-area: freq;
-    justify-self: start;
-  }
-
-  .subject-info {
-    grid-area: info;
-    align-self: start;
+  .q-options {
+    grid-template-columns: 1fr;
   }
 }
