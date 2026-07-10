@@ -50,7 +50,7 @@ function updateButtonText(dropdown, defaultText) {
 const univDropdown = document.querySelector("#select-univ");
 const univMenu = univDropdown.querySelector(".dropdown-menu");
 
-Object.keys(UNIVERSITIES).forEach((name) => {
+UNIVERSITIES.forEach((name) => {
   univMenu.appendChild(makeCheckboxItem(name, name));
 });
 
