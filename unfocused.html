@@ -15,7 +15,15 @@
 
         <p id="grade-label">학년: <strong id="grade-value">-</strong></p>
 
-        <h4>계열별 주요 권장과목</h4>
+        <div class="title-row">
+            <h4>계열별 주요 권장과목</h4>
+            <div id="term-selector" class="header-term-selector">
+                <select id="semester-select">
+                    <option value="1학기">1학기</option>
+                    <option value="2학기">2학기</option>
+                </select>
+            </div>
+        </div>
 
         <!--계열 탭 : data.js의 FACULTIES로 unfocused.js가 채운다-->
         <div id="discipline-tabs"></div>
