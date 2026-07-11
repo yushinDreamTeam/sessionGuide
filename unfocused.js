@@ -9,9 +9,26 @@
  *   4) 세부정보(i) → 해당 과목을 고른 학교/학과 팝업
  * ========================================================================= */
 
-/* ---------- 0) 학년 ---------- */
+/* ---------- 0) 학년·학기 ---------- */
 const selectedGrade = localStorage.getItem("selectedGrade") || "2학년";
+const initialSemester = localStorage.getItem("selectedSemester") || "1학기";
 document.querySelector("#grade-value").textContent = selectedGrade;
+
+const semesterSelect = document.querySelector("#semester-select");
+if (semesterSelect) {
+  semesterSelect.value = initialSemester;
+  semesterSelect.addEventListener("change", () => {
+    localStorage.setItem("selectedSemester", semesterSelect.value);
+    const activeFacultyButton = tabsWrap.querySelector(".tab-active");
+    if (activeFacultyButton) {
+      renderFaculty(activeFacultyButton.dataset.faculty);
+    }
+  });
+}
+
+function getSelectedSemester() {
+  return semesterSelect ? semesterSelect.value : initialSemester;
+}
 
 const ABS = new Set(typeof ABSOLUTE_SUBJECTS !== "undefined" ? ABSOLUTE_SUBJECTS : []);
 const SCIENCE = new Set(typeof SCIENCE_SUBJECTS !== "undefined" ? SCIENCE_SUBJECTS : []);
@@ -70,7 +87,10 @@ function subjectLabel(name) {
 /* ---------- 3) curriculum 형식으로 렌더 ---------- */
 function renderGroups(subjectMap) {
   let prevTerm = null;
-  const curriculum = CURRICULUM[selectedGrade] || [];
+  const semester = getSelectedSemester();
+  const curriculum = (CURRICULUM[selectedGrade] || []).filter(
+    (g) => g.term === semester
+  );
 
   subjectsRecommend.innerHTML = "";
 
@@ -84,10 +104,10 @@ function renderGroups(subjectMap) {
       prevTerm = g.term;
     }
 
-    // 권장 과목이 있는 과목만 필터링
-    const filtered = g.subjects.filter((s) => subjectMap.has(s));
+    // 모든 과목을 보여주되, 권장 과목과 아닌 과목을 구분
+    const subjects = g.subjects;
     
-    if (filtered.length === 0) return;
+    if (subjects.length === 0) return;
 
     // 선택과목군 카드
     const card = document.createElement("div");
@@ -104,19 +124,20 @@ function renderGroups(subjectMap) {
     const opts = document.createElement("div");
     opts.className = "q-options";
     
-    filtered.forEach((sub) => {
+    subjects.forEach((sub) => {
       const label = document.createElement("label");
       label.className = "opt";
       label.style.cursor = "pointer";
       label.addEventListener("click", () => {
-        openModal({ subject: sub, sources: subjectMap.get(sub).sources });
+        openModal({ subject: sub, sources: subjectMap.get(sub)?.sources || [] });
       });
 
       const txt = document.createElement("span");
       txt.textContent = subjectLabel(sub);
       if (ABS.has(sub)) txt.classList.add("abs");
-      if (SCIENCE.has(sub)) txt.classList.add("science");
-      if (SOCIAL.has(sub)) txt.classList.add("social");
+      if (SCIENCE.has(sub)) label.classList.add("science");
+      if (SOCIAL.has(sub)) label.classList.add("social");
+      if (!subjectMap.has(sub)) label.classList.add("inactive");
 
       label.appendChild(txt);
       opts.appendChild(label);
@@ -129,7 +150,7 @@ function renderGroups(subjectMap) {
 
 function renderFaculty(faculty) {
   subjectsRecommend.innerHTML = "";
-  resultSummary.textContent = `${faculty} 계열 · ${selectedGrade} 개설 과목 기준`;
+  resultSummary.textContent = `${faculty} 계열 · ${selectedGrade} ${getSelectedSemester()} 개설 과목 기준`;
 
   const subjectMap = getRecommendedSubjectsByFaculty(faculty);
 
