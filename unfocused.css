@@ -26,17 +26,52 @@ button {
   color: #555;
 }
 
-h4 {
+.title-row {
   width: min(760px, 100%);
-  margin: 0 auto 20px;
+  margin: 0 auto 8px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+h4 {
+  margin: 0;
   font-size: 26px;
   letter-spacing: -0.03em;
+}
+
+#term-selector {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  min-width: 120px;
+  padding: 10px 14px;
+  background: #fff;
+  border: 2px solid #222;
+  border-radius: 18px;
+}
+
+#term-selector label {
+  font-size: 13px;
+  font-weight: 700;
+  color: #666;
+}
+
+#term-selector select {
+  border: none;
+  background: transparent;
+  outline: none;
+  font-weight: 700;
+  color: #222;
 }
 
 /* ---------- 계열 탭 ---------- */
 #discipline-tabs {
   width: min(760px, 100%);
-  margin: 0 auto 24px;
+  margin: 0 auto 12px;
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
@@ -164,11 +199,35 @@ h4 {
   font-size: 15px;
   font-weight: 600;
   transition: background 0.12s ease, border-color 0.12s ease;
+  background: #efeade;
 }
 
 .opt:hover {
-  background: #faf6ec;
+  background: #efeade;
   border-color: #cbb;
+}
+
+.opt.inactive {
+  background: #e6e6e6;
+  color: #777;
+  border-color: #ccc;
+}
+
+.opt.inactive span {
+  color: #777;
+}
+
+.opt.inactive span.abs {
+  color: #777 !important;
+}
+
+.opt.inactive.science,
+.opt.inactive.social,
+.opt.inactive.abs.science,
+.opt.inactive.abs.social {
+  background: #e6e6e6 !important;
+  border-color: #ccc !important;
+  color: #777 !important;
 }
 
 .opt span.abs {
@@ -176,27 +235,27 @@ h4 {
   font-weight: 800;
 }
 
-.opt span.science {
+.opt.science {
   background-color: #85b6ed;
+  border-color: #222;
   color: #000;
-  padding: 2px 8px;
-  border-radius: 6px;
 }
 
-.opt span.social {
+.opt.social {
   background-color: #f4d03f;
+  border-color: #222;
   color: #333;
-  padding: 2px 8px;
-  border-radius: 6px;
 }
 
-.opt span.abs.science {
+.opt.abs.science {
   background-color: #4a90e2;
+  border-color: #222;
   color: #c0392b;
 }
 
-.opt span.abs.social {
+.opt.abs.social {
   background-color: #f4d03f;
+  border-color: #222;
   color: #c0392b;
 }
 
