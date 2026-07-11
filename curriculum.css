@@ -219,7 +219,7 @@ h4 {
 }
 
 .opt:hover {
-  background: #faf6ec;
+  background: #efeade;
   border-color: #cbb;
 }
 
@@ -231,31 +231,38 @@ h4 {
 }
 
 .opt:has(input:checked) {
-  background: #f1eadc;
   border-color: #222;
+}
+
+.opt:has(input:checked):not(.science):not(.social) {
+  background: #f1eadc;
 }
 
 .opt .abs {
   color: #c0392b;
 }
-.opt .abs.science {
-  background-color: #4a90e2;
-  color: #c0392b;
-  padding: 2px 8px;
-  border-radius: 6px;
-}
-
-.opt .abs.social {
-  background-color: #f4d03f;
-  color: #c0392b;
-  padding: 2px 8px;
-  border-radius: 6px;
-}
-.opt .science {
+.opt.science {
   background-color: #85b6ed;
   color: rgb(0, 0, 0);
-  padding: 2px 8px;
-  border-radius: 6px;
+  border-color: #222;
+}
+
+.opt.social {
+  background-color: #f4d03f;
+  color: #333;
+  border-color: #222;
+}
+
+.opt.abs.science {
+  background-color: #4a90e2;
+  color: #c0392b;
+  border-color: #222;
+}
+
+.opt.abs.social {
+  background-color: #f4d03f;
+  color: #c0392b;
+  border-color: #222;
 }
 
 .opt .social {
