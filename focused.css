@@ -6,13 +6,16 @@ body {
   margin: 0;
   min-height: 100vh;
   padding: 48px 20px 120px;
-  background: #f4efe5;
+  background:
+    radial-gradient(circle at top left, rgba(255,255,255,0.8), transparent 28%),
+    linear-gradient(135deg, #f8f2e7 0%, #f2e9da 100%);
   color: #222;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
 button,
-input {
+input,
+select {
   font: inherit;
 }
 
@@ -20,31 +23,51 @@ input {
   display: none !important;
 }
 
+.page-header {
+  width: min(860px, 100%);
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
 #grade-label {
-  width: min(760px, 100%);
-  margin: 0 auto 12px;
+  margin: 0 0 8px;
   font-size: 15px;
-  color: #555;
+  color: #5f574d;
+}
+
+.title-row {
+  width: min(860px, 100%);
+  margin: 0 auto 16px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+  flex-wrap: wrap;
 }
 
 h4 {
-  width: min(760px, 100%);
-  margin: 0 auto 20px;
-  font-size: 26px;
+  margin: 0;
+  font-size: 28px;
   letter-spacing: -0.03em;
+  font-weight: 800;
 }
 
 #search {
-  width: min(760px, 100%);
-  margin: 0 auto 20px;
-  padding: 28px;
+  width: min(860px, 100%);
+  margin: 0 auto 24px;
+  padding: 24px;
   display: grid;
-  grid-template-columns: repeat(3, minmax(180px, 1fr));
-  gap: 16px;
-  background: #fffaf0;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  background: rgba(255, 250, 240, 0.95);
   border: 2px solid #222;
   border-radius: 28px;
-  box-shadow: 8px 8px 0 #222;
+  box-shadow: 10px 10px 0 #222;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
 }
 
 .dropdown {
@@ -53,12 +76,12 @@ h4 {
 
 .dropdown-button {
   width: 100%;
-  min-height: 56px;
-  padding: 12px 16px;
+  min-height: 54px;
+  padding: 12px 14px;
   background: #fff;
   color: #222;
   border: 2px solid #222;
-  border-radius: 18px;
+  border-radius: 16px;
   cursor: pointer;
   text-align: left;
   font-weight: 700;
@@ -69,6 +92,36 @@ h4 {
   transform: translate(-2px, -2px);
   box-shadow: 4px 4px 0 #222;
   background: #fffdf8;
+}
+
+#term-selector {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  min-height: 54px;
+  padding: 8px 10px;
+  background: #fff;
+  border: 2px solid #222;
+  border-radius: 16px;
+}
+
+.header-term-selector {
+  min-width: 140px;
+}
+
+#term-selector label {
+  font-size: 13px;
+  font-weight: 700;
+  color: #666;
+}
+
+#term-selector select {
+  border: none;
+  background: transparent;
+  font-weight: 700;
+  color: #222;
+  outline: none;
 }
 
 .dropdown-button:active {
@@ -133,12 +186,12 @@ h4 {
 
 #search-button {
   grid-column: 1 / -1;
-  min-height: 56px;
+  min-height: 54px;
   padding: 12px 18px;
-  background: #222;
+  background: linear-gradient(135deg, #2f2f2f 0%, #1d1d1d 100%);
   color: #fff;
   border: 2px solid #222;
-  border-radius: 18px;
+  border-radius: 16px;
   cursor: pointer;
   font-weight: 800;
   transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
@@ -156,20 +209,24 @@ h4 {
 }
 
 #view-result {
-  width: min(760px, 100%);
+  width: min(860px, 100%);
   margin: 32px auto 0;
-  padding: 28px;
-  background: #fff;
+  padding: 26px;
+  background: rgba(255, 255, 255, 0.96);
   border: 2px solid #222;
   border-radius: 28px;
-  box-shadow: 8px 8px 0 #222;
+  box-shadow: 10px 10px 0 #222;
 }
 
 #result-summary {
-  margin: 0 0 20px;
-  color: #666;
+  margin: 0 0 18px;
+  padding: 10px 12px;
+  color: #4c463e;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 700;
+  background: #f8f2e7;
+  border: 1px solid #e5ddcb;
+  border-radius: 12px;
 }
 
 #subjects-recommend {
@@ -178,9 +235,12 @@ h4 {
 
 .empty-msg {
   padding: 20px;
-  color: #888;
+  color: #7d756b;
   text-align: center;
-  font-weight: 600;
+  font-weight: 700;
+  background: #efeade;
+  border: 1px dashed #d8cdb3;
+  border-radius: 16px;
 }
 
 /* ---------- 세부정보 팝업 ---------- */
@@ -204,7 +264,7 @@ h4 {
   background: #fffaf0;
   border: 2px solid #222;
   border-radius: 24px;
-  box-shadow: 8px 8px 0 #222;
+  box-shadow: 10px 10px 0 #222;
 }
 
 #modal-close {
@@ -317,10 +377,10 @@ h4 {
 
 /* ---------- 편제표 형식: 학기별·선택과목군별 카드 ---------- */
 .term-header {
-  margin: 28px 0 14px;
-  padding: 8px 16px;
+  margin: 22px 0 12px;
+  padding: 8px 14px;
   display: inline-block;
-  background: #222;
+  background: linear-gradient(135deg, #2f2f2f 0%, #1d1d1d 100%);
   color: #fff;
   border-radius: 999px;
   font-size: 15px;
@@ -329,8 +389,8 @@ h4 {
 
 .q-card {
   margin-bottom: 16px;
-  padding: 20px 22px;
-  background: #fff;
+  padding: 18px 20px;
+  background: linear-gradient(180deg, #fffefb 0%, #fff 100%);
   border: 2px solid #222;
   border-radius: 20px;
   box-shadow: 5px 5px 0 #222;
@@ -381,11 +441,35 @@ h4 {
   font-size: 15px;
   font-weight: 600;
   transition: background 0.12s ease, border-color 0.12s ease;
+  background: #efeade;
 }
 
 .opt:hover {
-  background: #faf6ec;
+  background: #efeade;
   border-color: #cbb;
+}
+
+.opt.inactive {
+  background: #e6e6e6;
+  color: #777;
+  border-color: #ccc;
+}
+
+..opt.inactive span {
+  color: #777;
+}
+
+.opt.inactive span.abs {
+  color: #777 !important;
+}
+
+.opt.inactive.science,
+.opt.inactive.social,
+.opt.inactive.abs.science,
+.opt.inactive.abs.social {
+  background: #e6e6e6 !important;
+  border-color: #ccc !important;
+  color: #777 !important;
 }
 
 .opt span.abs {
@@ -393,27 +477,27 @@ h4 {
   font-weight: 800;
 }
 
-.opt span.science {
+.opt.science {
   background-color: #85b6ed;
+  border-color: #222;
   color: #000;
-  padding: 2px 8px;
-  border-radius: 6px;
 }
 
-.opt span.social {
+.opt.social {
   background-color: #f4d03f;
+  border-color: #222;
   color: #333;
-  padding: 2px 8px;
-  border-radius: 6px;
 }
 
-.opt span.abs.science {
+.opt.abs.science {
   background-color: #4a90e2;
+  border-color: #222;
   color: #c0392b;
 }
 
-.opt span.abs.social {
+.opt.abs.social {
   background-color: #f4d03f;
+  border-color: #222;
   color: #c0392b;
 }
 
@@ -422,11 +506,16 @@ h4 {
     padding: 24px 12px;
   }
 
+  .page-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
   #search {
     grid-template-columns: 1fr;
     padding: 20px;
     border-radius: 22px;
-    box-shadow: 5px 5px 0 #222;
+    box-shadow: 6px 6px 0 #222;
   }
 
   #search-button {
@@ -442,7 +531,7 @@ h4 {
   #view-result {
     padding: 20px;
     border-radius: 22px;
-    box-shadow: 5px 5px 0 #222;
+    box-shadow: 6px 6px 0 #222;
   }
 
   .q-options {
