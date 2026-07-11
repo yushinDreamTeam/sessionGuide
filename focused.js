@@ -9,22 +9,39 @@
  *   5) 세부정보(i) → 해당 과목을 고른 학교/학과 팝업
  * ========================================================================= */
 
-/* ---------- 0) 학년 ---------- */
+/* ---------- 0) 학년·학기 ---------- */
 const selectedGrade = localStorage.getItem("selectedGrade") || "2학년";
+const initialSemester = localStorage.getItem("selectedSemester") || "1학기";
 document.querySelector("#grade-value").textContent = selectedGrade;
+
+const semesterSelect = document.querySelector("#semester-select");
+if (semesterSelect) {
+  semesterSelect.value = initialSemester;
+  semesterSelect.addEventListener("change", () => {
+    localStorage.setItem("selectedSemester", semesterSelect.value);
+    if (!viewResult.hidden) {
+      runSearch();
+    }
+  });
+}
+
+function getSelectedSemester() {
+  return semesterSelect ? semesterSelect.value : initialSemester;
+}
 
 const ABS = new Set(typeof ABSOLUTE_SUBJECTS !== "undefined" ? ABSOLUTE_SUBJECTS : []);
 const SCIENCE = new Set(typeof SCIENCE_SUBJECTS !== "undefined" ? SCIENCE_SUBJECTS : []);
 const SOCIAL = new Set(typeof SOCIAL_SUBJECTS !== "undefined" ? SOCIAL_SUBJECTS : []);
 
-/* ---------- 유틸: 체크박스 라벨 만들기 ---------- */
-function makeCheckboxItem(value, labelText) {
+/* ---------- 유틸: 선택 항목 라벨 만들기 ---------- */
+function makeChoiceItem(value, labelText, type = "checkbox", name = "") {
   const label = document.createElement("label");
   label.className = "menu-item";
 
   const input = document.createElement("input");
-  input.type = "checkbox";
+  input.type = type;
   input.value = value;
+  if (name) input.name = name;
 
   label.appendChild(input);
   label.appendChild(document.createTextNode(" " + labelText));
@@ -33,9 +50,7 @@ function makeCheckboxItem(value, labelText) {
 
 function updateButtonText(dropdown, defaultText) {
   const button = dropdown.querySelector(".dropdown-button");
-  const checked = [
-    ...dropdown.querySelectorAll("input[type='checkbox']:checked"),
-  ];
+  const checked = [...dropdown.querySelectorAll("input:checked")];
 
   if (checked.length === 0) {
     button.textContent = defaultText;
@@ -51,10 +66,15 @@ const univDropdown = document.querySelector("#select-univ");
 const univMenu = univDropdown.querySelector(".dropdown-menu");
 
 UNIVERSITIES.forEach((name) => {
-  univMenu.appendChild(makeCheckboxItem(name, name));
+  univMenu.appendChild(makeChoiceItem(name, name, "checkbox"));
 });
 
-univMenu.addEventListener("change", () => {
+univMenu.addEventListener("change", (e) => {
+  if (e.target.checked) {
+    univMenu.querySelectorAll("input[type='checkbox']").forEach((cb) => {
+      if (cb !== e.target) cb.checked = false;
+    });
+  }
   updateButtonText(univDropdown, "대학 선택 (선택)");
   populateMajors();
 });
@@ -64,7 +84,7 @@ const facultyDropdown = document.querySelector("#select-faculty");
 const facultyMenu = facultyDropdown.querySelector(".dropdown-menu");
 
 FACULTIES.forEach((name) => {
-  facultyMenu.appendChild(makeCheckboxItem(name, name));
+  facultyMenu.appendChild(makeChoiceItem(name, name));
 });
 
 facultyMenu.addEventListener("change", (e) => {
@@ -126,7 +146,7 @@ function populateMajors() {
     return;
   }
 
-  majors.forEach((m) => majorMenu.appendChild(makeCheckboxItem(m, m)));
+  majors.forEach((m) => majorMenu.appendChild(makeChoiceItem(m, m)));
 }
 
 majorMenu.addEventListener("change", (e) => {
@@ -201,7 +221,10 @@ function subjectLabel(name) {
 
 function renderGroups(recommendedSet, sourceMap) {
   let prevTerm = null;
-  const curriculum = CURRICULUM[selectedGrade] || [];
+  const semester = getSelectedSemester();
+  const curriculum = (CURRICULUM[selectedGrade] || []).filter(
+    (g) => g.term === semester
+  );
 
   subjectsRecommend.innerHTML = "";
 
@@ -215,10 +238,9 @@ function renderGroups(recommendedSet, sourceMap) {
       prevTerm = g.term;
     }
 
-    // 권장 과목이 있는 과목만 필터링
-    const filtered = g.subjects.filter((s) => recommendedSet.has(s));
-    
-    if (filtered.length === 0) return;
+    // 모든 과목을 보여주되, 권장 과목은 그대로, 비권장 과목은 비활성화 처리
+    const subjects = g.subjects;
+    if (subjects.length === 0) return;
 
     // 선택과목군 카드
     const card = document.createElement("div");
@@ -235,7 +257,7 @@ function renderGroups(recommendedSet, sourceMap) {
     const opts = document.createElement("div");
     opts.className = "q-options";
     
-    filtered.forEach((sub) => {
+    subjects.forEach((sub) => {
       const label = document.createElement("label");
       label.className = "opt";
       label.style.cursor = "pointer";
@@ -246,8 +268,9 @@ function renderGroups(recommendedSet, sourceMap) {
       const txt = document.createElement("span");
       txt.textContent = subjectLabel(sub);
       if (ABS.has(sub)) txt.classList.add("abs");
-      if (SCIENCE.has(sub)) txt.classList.add("science");
-      if (SOCIAL.has(sub)) txt.classList.add("social");
+      if (SCIENCE.has(sub)) label.classList.add("science");
+      if (SOCIAL.has(sub)) label.classList.add("social");
+      if (!recommendedSet.has(sub)) label.classList.add("inactive");
 
       label.appendChild(txt);
       opts.appendChild(label);
@@ -258,7 +281,7 @@ function renderGroups(recommendedSet, sourceMap) {
   });
 }
 
-searchButton.addEventListener("click", () => {
+function runSearch() {
   const faculty = getSelectedFaculty();
   const majors = [...majorMenu.querySelectorAll("input:checked")].map(
     (c) => c.value
@@ -294,12 +317,15 @@ searchButton.addEventListener("click", () => {
     return;
   }
 
+  const semester = getSelectedSemester();
   const univNote =
     universities.length > 0 ? ` · 대학 ${universities.length}곳` : " · 전체 대학";
-  resultSummary.textContent = `${majors.join(", ")}${univNote} · ${selectedGrade} 개설 과목 기준`;
+  resultSummary.textContent = `${majors.join(", ")}${univNote} · ${selectedGrade} ${semester} 개설 과목 기준`;
 
   renderGroups(recommendedSet, sourceMap);
-});
+}
+
+searchButton.addEventListener("click", runSearch);
 
 /* ---------- 5) 세부정보 팝업 ---------- */
 const modalOverlay = document.querySelector("#modal-overlay");
