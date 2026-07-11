@@ -15,10 +15,18 @@
         <script src="focused.js" defer></script>
 
         <p id="grade-label">학년: <strong id="grade-value">-</strong></p>
-        <h4>핵심 권장 과목</h4>
+        <div class="title-row">
+            <h4>핵심 권장 과목</h4>
+            <div id="term-selector" class="header-term-selector">
+                <select id="semester-select">
+                    <option value="1학기">1학기</option>
+                    <option value="2학기">2학기</option>
+                </select>
+            </div>
+        </div>
 
         <div id="search">
-            <!--대학 선택 (선택 / 복수 선택 가능)-->
+            <!--대학 선택 (1개만 선택 가능)-->
             <div class="dropdown" id="select-univ">
                 <button type="button" class="dropdown-button">대학 선택 (선택)</button>
                 <div class="dropdown-menu" hidden>
