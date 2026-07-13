@@ -55,10 +55,21 @@ select {
 
 .developer-list {
   margin: 8px 0 0;
-  color: #6b6b60;
-  font-size: 13px;
-  line-height: 1.5;
-  font-weight: 600;
+  color: #3f3f37;
+  font-size: 14px;
+  line-height: 1.6;
+  font-weight: 700;
+}
+
+.developer-role {
+  color: #111111;
+  font-size: 15px;
+  font-weight: 900;
+}
+
+.developer-name {
+  font-weight: 400;
+  color: inherit;
 }
 
 .home-title {
