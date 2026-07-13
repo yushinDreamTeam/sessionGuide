@@ -455,7 +455,7 @@ h4 {
   border-color: #ccc;
 }
 
-..opt.inactive span {
+.opt.inactive span {
   color: #777;
 }
 
