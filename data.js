@@ -14,7 +14,6 @@ const FACULTIES = ["공학", "자연", "인문", "사회", "의약", "교육", "
 
 const UNIVERSITIES = {
   "건국대": { logo: "assets/logos/건국대.png" },
-  "경북대": { logo: "assets/logos/경북대.png" },
   "경희대": { logo: "assets/logos/경희대.png" },
   "고려대": { logo: "assets/logos/고려대.png" },
   "국민대": { logo: "assets/logos/국민대.png" },
