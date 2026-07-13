@@ -23,7 +23,6 @@ const UNIVERSITIES = {
   "서울시립대": { logo: "assets/logos/서울시립대.png" },
   "숭실대": { logo: "assets/logos/숭실대.png" },
   "중앙대": { logo: "assets/logos/중앙대.png" },
-  "한양대(ERICA)": { logo: "assets/logos/한양대(ERICA).png" },
 };
 
 const SUBJECTS = {
