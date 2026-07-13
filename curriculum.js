@@ -14,7 +14,10 @@ const pickStatus = document.querySelector("#pick-status");
 const termSelect = document.querySelector("#term-select");
 let allGroups = CURRICULUM[selectedGrade] || [];
 let selectedTerm = termSelect ? termSelect.value : "1학기";
-let groups = allGroups.filter((g) => g.term === selectedTerm);
+let groups =
+  selectedTerm === "전체"
+    ? allGroups
+    : allGroups.filter((g) => g.term === selectedTerm);
 const ABS = new Set(typeof ABSOLUTE_SUBJECTS !== "undefined" ? ABSOLUTE_SUBJECTS : []);
 const SCIENCE = new Set(typeof SCIENCE_SUBJECTS !== "undefined" ? SCIENCE_SUBJECTS : []);
 const SOCIAL = new Set(typeof SOCIAL_SUBJECTS !== "undefined" ? SOCIAL_SUBJECTS : []);
@@ -28,7 +31,10 @@ try { saved = JSON.parse(localStorage.getItem(STORE_KEY)) || {}; } catch (e) { s
 if (termSelect) {
   termSelect.addEventListener("change", (e) => {
     selectedTerm = e.target.value;
-    groups = allGroups.filter((g) => g.term === selectedTerm);
+    groups =
+      selectedTerm === "전체"
+        ? allGroups
+        : allGroups.filter((g) => g.term === selectedTerm);
     form.innerHTML = "";
     if (groups.length === 0) {
       form.innerHTML = '<p class="empty-msg">선택한 학기에 과목이 없어요.</p>';
