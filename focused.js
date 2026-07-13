@@ -64,8 +64,11 @@ function updateButtonText(dropdown, defaultText) {
 /* ---------- 1) 대학 드롭다운 채우기 ---------- */
 const univDropdown = document.querySelector("#select-univ");
 const univMenu = univDropdown.querySelector(".dropdown-menu");
+const universityNames = Array.isArray(UNIVERSITIES)
+  ? UNIVERSITIES
+  : Object.keys(UNIVERSITIES);
 
-UNIVERSITIES.forEach((name) => {
+universityNames.forEach((name) => {
   univMenu.appendChild(makeChoiceItem(name, name, "checkbox"));
 });
 
