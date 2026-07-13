@@ -89,7 +89,7 @@ function renderGroups(subjectMap) {
   let prevTerm = null;
   const semester = getSelectedSemester();
   const curriculum = (CURRICULUM[selectedGrade] || []).filter(
-    (g) => g.term === semester
+    (g) => semester === "전체" || g.term === semester
   );
 
   subjectsRecommend.innerHTML = "";
