@@ -25,15 +25,16 @@ select {
 
 /* ---------- 헤더 ---------- */
 .notice-banner {
-  margin-bottom: 16px;
+  margin-bottom: 18px;
   padding: 12px 14px;
   border: 2px solid #d98c00;
-  border-radius: 16px;
-  background: #fff7e6;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #fff7e6 0%, #fff2d3 100%);
   color: #8a4b00;
   font-size: 14px;
   font-weight: 700;
   line-height: 1.5;
+  box-shadow: 3px 3px 0 #d98c00;
 }
 
 .home-header {
@@ -42,17 +43,26 @@ select {
 
 .home-badge {
   display: inline-block;
-  padding: 6px 14px;
+  padding: 7px 14px;
   background: #222;
   color: #fff;
   border-radius: 999px;
   font-size: 13px;
   font-weight: 800;
   letter-spacing: -0.01em;
+  box-shadow: 3px 3px 0 #c7b79a;
+}
+
+.developer-list {
+  margin: 8px 0 0;
+  color: #6b6b60;
+  font-size: 13px;
+  line-height: 1.5;
+  font-weight: 600;
 }
 
 .home-title {
-  margin: 16px 0 10px;
+  margin: 12px 0 10px;
   font-size: 44px;
   font-weight: 900;
   letter-spacing: -0.04em;
