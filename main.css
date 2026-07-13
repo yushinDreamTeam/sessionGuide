@@ -24,6 +24,18 @@ select {
 }
 
 /* ---------- 헤더 ---------- */
+.notice-banner {
+  margin-bottom: 16px;
+  padding: 12px 14px;
+  border: 2px solid #d98c00;
+  border-radius: 16px;
+  background: #fff7e6;
+  color: #8a4b00;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
 .home-header {
   margin-bottom: 28px;
 }
