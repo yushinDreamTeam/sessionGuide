@@ -78,7 +78,7 @@ univMenu.addEventListener("change", (e) => {
       if (cb !== e.target) cb.checked = false;
     });
   }
-  updateButtonText(univDropdown, "대학 선택");
+  updateButtonText(univDropdown, "대학 선택 (선택)");
   populateMajors();
 });
 
@@ -300,12 +300,6 @@ function runSearch() {
       '<p class="empty-msg">계열을 선택해 주세요.</p>';
     return;
   }
-  if (universities.length === 0) {
-    resultSummary.textContent = "";
-    subjectsRecommend.innerHTML =
-      '<p class="empty-msg">대학을 선택해 주세요.</p>';
-    return;
-  }
   if (majors.length === 0) {
     resultSummary.textContent = "";
     subjectsRecommend.innerHTML =
@@ -327,7 +321,9 @@ function runSearch() {
   }
 
   const semester = getSelectedSemester();
-  resultSummary.textContent = `${universities.join(", ")} · ${majors.join(", ")} · ${selectedGrade} ${semester} 개설 과목 기준`;
+  const univNote =
+    universities.length > 0 ? ` · 대학 ${universities.length}곳` : " · 전체 대학";
+  resultSummary.textContent = `${majors.join(", ")}${univNote} · ${selectedGrade} ${semester} 개설 과목 기준`;
 
   renderGroups(recommendedSet, sourceMap);
 }
