@@ -228,7 +228,7 @@ h4 {
   gap: 8px;
 }
 
-.opt {
+ .opt {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -239,17 +239,17 @@ h4 {
   font-size: 15px;
   font-weight: 600;
   transition: background 0.12s ease, border-color 0.12s ease;
-  background: #fff4cf;
-  color: #4a3b12;
+  background: hsl(136, 72%, 76%);
+  color: #4a5a45;
 }
 
 .opt:hover {
-  background: hsl(48, 100%, 84%);
+  background: hsl(136, 72%, 64%);
   border-color: #222;
 }
 
 .opt:has(input:checked) {
-  background: hsl(48, 100%, 84%);
+  background: hsl(136, 72%, 64%);
   border-color: #222;
 }
 
