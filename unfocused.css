@@ -19,11 +19,77 @@ button {
   display: none !important;
 }
 
-#grade-label {
+.page-top-banner {
   width: min(760px, 100%);
-  margin: 0 auto 12px;
+  margin: 0 auto 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.page-top-badge {
+  display: inline-block;
+  padding: 7px 14px;
+  background: #222;
+  color: #fff;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  box-shadow: 3px 3px 0 #c7b79a;
+}
+
+.page-developer-list {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 8px 14px;
+  background: #222;
+  color: #fff;
+  border-radius: 999px;
+  font-size: 13px;
+  line-height: 1.4;
+  font-weight: 700;
+  box-shadow: 3px 3px 0 #c7b79a;
+}
+
+.page-developer-role {
+  color: #fff;
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.page-developer-name {
+  color: #fff;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+#grade-label {
+  margin: 0;
   font-size: 15px;
   color: #555;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 12px;
+  background: #fff;
+  border: 2px solid #222;
+  border-radius: 999px;
+  box-shadow: 3px 3px 0 #c7b79a;
+}
+
+#grade-label strong {
+  display: inline-block;
+  margin-left: 4px;
+  padding: 0;
+  background: none;
+  border: none;
+  box-shadow: none;
+  color: #222;
 }
 
 .title-row {
@@ -32,7 +98,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  gap: 6px;
+  gap: 10px;
   flex-wrap: wrap;
 }
 
@@ -47,11 +113,19 @@ h4 {
   flex-direction: column;
   justify-content: center;
   gap: 4px;
-  min-width: 120px;
+  min-width: 70px;
   padding: 10px 14px;
   background: #fff;
   border: 2px solid #222;
   border-radius: 18px;
+}
+
+.title-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: nowrap;
+  white-space: nowrap;
 }
 
 #term-selector label {
@@ -66,6 +140,44 @@ h4 {
   outline: none;
   font-weight: 700;
   color: #222;
+}
+
+@media (max-width: 720px) {
+  .title-row {
+    flex-wrap: wrap;
+    padding-bottom: 8px;
+  }
+
+  .title-row h4 {
+    flex: 1 1 100%;
+    min-width: 160px;
+  }
+
+  .title-controls {
+    flex: 1 1 100%;
+    min-width: 0;
+    margin-top: 8px;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  .title-controls > * {
+    min-width: 0;
+  }
+
+  .title-controls #grade-label,
+  .title-controls #term-selector {
+    flex: 0 1 auto;
+  }
+
+  .title-controls #term-selector {
+    min-width: 120px;
+    max-width: 100%;
+  }
+
+  .title-controls #term-selector select {
+    width: 100%;
+  }
 }
 
 /* ---------- 계열 탭 ---------- */
