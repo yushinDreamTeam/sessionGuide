@@ -9,27 +9,37 @@
         <link rel="stylesheet" href="curriculum.css">
     </head>
     <body>
+        <header class="page-top-banner">
+            <span class="page-top-badge">유신고 · 2026 드림팀</span>
+            <p class="page-developer-list">
+                <span class="page-developer-role">팀장</span>
+                <span class="page-developer-name">최진형</span>
+                <span class="page-developer-role">팀원</span>
+                <span class="page-developer-name">이성빈, 나지환, 박영현, 장재호</span>
+            </p>
+        </header>
+
         <script src="data.js"></script>
         <script src="curriculum.js" defer></script>
 
-        <p id="grade-label">학년: <strong id="grade-value">-</strong></p>
-        <h4>우리학교 편제표</h4>
-        
-        <div id="controls-row">
-            <div id="term-selector">
-                <label for="term-select">학기 선택:</label>
-                <select id="term-select">
-                    <option value="전체">전체</option>
-                    <option value="1학기">1학기</option>
-                    <option value="2학기">2학기</option>
-                </select>
+        <div class="title-row">
+            <h4>우리학교 편제표</h4>
+            <div class="title-controls">
+                <p id="grade-label"><strong id="grade-value">-</strong></p>
+                <div id="term-selector">
+                    <select id="term-select">
+                        <option value="전체">전체</option>
+                        <option value="1학기">1학기</option>
+                        <option value="2학기">2학기</option>
+                    </select>
+                </div>
             </div>
-            
-            <div id="legend">
-                <span class="legend-item"><span class="legend-abs">절대과목</span> 빨간색 글자</span>
-                <span class="legend-item"><span class="legend-social">사회과목</span> 노란 배경</span>
-                <span class="legend-item"><span class="legend-science">과학과목</span> 파란 배경</span>
-            </div>
+        </div>
+
+        <div id="legend">
+            <span class="legend-item"><span class="legend-abs">절대과목</span> 빨간색 글자</span>
+            <span class="legend-item"><span class="legend-social">사회과목</span> 노란 배경</span>
+            <span class="legend-item"><span class="legend-science">과학과목</span> 파란 배경</span>
         </div>
 
         <form id="curriculum-form">
