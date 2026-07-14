@@ -69,6 +69,46 @@ h4 {
 }
 
 /* ---------- 계열 탭 ---------- */
+.legend {
+  width: min(760px, 100%);
+  margin: 0 auto 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #5f574d;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.legend-abs {
+  color: #c0392b;
+  font-weight: 700;
+}
+
+.legend-social {
+  display: inline-block;
+  padding: 4px 10px;
+  background-color: #f4d03f;
+  color: #333;
+  border-radius: 6px;
+  font-weight: 700;
+}
+
+.legend-science {
+  display: inline-block;
+  padding: 4px 10px;
+  background-color: #4a90e2;
+  color: #fff;
+  border-radius: 6px;
+  font-weight: 700;
+}
+
 #discipline-tabs {
   width: min(760px, 100%);
   margin: 0 auto 12px;
@@ -199,12 +239,18 @@ h4 {
   font-size: 15px;
   font-weight: 600;
   transition: background 0.12s ease, border-color 0.12s ease;
-  background: #efeade;
+  background: #fff4cf;
+  color: #4a3b12;
 }
 
 .opt:hover {
-  background: #efeade;
-  border-color: #cbb;
+  background: hsl(48, 100%, 84%);
+  border-color: #222;
+}
+
+.opt:has(input:checked) {
+  background: hsl(48, 100%, 84%);
+  border-color: #222;
 }
 
 .opt.inactive {
