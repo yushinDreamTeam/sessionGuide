@@ -54,22 +54,32 @@ select {
 }
 
 .developer-list {
-  margin: 8px 0 0;
-  color: #3f3f37;
-  font-size: 14px;
-  line-height: 1.6;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  flex-wrap: nowrap;
+  margin: 12px 0 0;
+  padding: 8px 14px;
+  background: #222;
+  color: #fff;
+  border-radius: 999px;
+  font-size: 13px;
+  line-height: 1.5;
   font-weight: 700;
+  box-shadow: 3px 3px 0 #c7b79a;
+  white-space: nowrap;
 }
 
 .developer-role {
-  color: #111111;
-  font-size: 15px;
+  color: #fff;
+  font-size: 13px;
   font-weight: 900;
 }
 
 .developer-name {
-  font-weight: 400;
-  color: inherit;
+  font-weight: 500;
+  color: #fff;
+  font-size: 13px;
 }
 
 .home-title {
