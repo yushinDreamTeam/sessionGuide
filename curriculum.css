@@ -219,7 +219,7 @@ h4 {
 }
 
 .opt:hover {
-  background: #efeade;
+  background: hsl(38, 100%, 84%);
   border-color: #cbb;
 }
 
@@ -235,7 +235,7 @@ h4 {
 }
 
 .opt:has(input:checked):not(.science):not(.social) {
-  background: #f1eadc;
+  background: hsl(48, 100%, 84%);
 }
 
 .opt .abs {
