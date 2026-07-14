@@ -481,17 +481,17 @@ h4 {
   font-size: 15px;
   font-weight: 600;
   transition: background 0.12s ease, border-color 0.12s ease;
-  background: hsl(48, 100%, 84%);
-  color: #6b5520;
+  background: hsl(136, 72%, 64%);
+  color: #3d5036;
 }
 
 .opt:hover {
-  background: hsl(48, 100%, 84%);
+  background: hsl(136, 72%, 64%);
   border-color: #222;
 }
 
 .opt:has(input:checked) {
-  background: hsl(48, 100%, 84%);
+  background: hsl(136, 72%, 64%);
   border-color: #222;
 }
 
