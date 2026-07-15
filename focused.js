@@ -10,9 +10,20 @@
  * ========================================================================= */
 
 /* ---------- 0) 학년·학기 ---------- */
-const selectedGrade = localStorage.getItem("selectedGrade") || "2학년";
+let selectedGrade = localStorage.getItem("selectedGrade") || "2학년";
 const initialSemester = localStorage.getItem("selectedSemester") || "1학기";
-document.querySelector("#grade-value").textContent = selectedGrade;
+const gradeSelect = document.querySelector("#grade-select");
+
+if (gradeSelect) {
+  gradeSelect.value = selectedGrade;
+  gradeSelect.addEventListener("change", () => {
+    selectedGrade = gradeSelect.value;
+    localStorage.setItem("selectedGrade", selectedGrade);
+    if (!viewResult.hidden) {
+      runSearch();
+    }
+  });
+}
 
 const semesterSelect = document.querySelector("#semester-select");
 if (semesterSelect) {
