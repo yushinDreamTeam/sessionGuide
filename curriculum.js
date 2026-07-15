@@ -6,35 +6,52 @@
  *  - (절대) 표기, 선택 개수 검증, localStorage 저장
  * ========================================================================= */
 
-const selectedGrade = localStorage.getItem("selectedGrade") || "1학년";
-document.querySelector("#grade-value").textContent = selectedGrade;
+let selectedGrade = localStorage.getItem("selectedGrade") || "1학년";
+const gradeSelect = document.querySelector("#grade-select");
+
+if (gradeSelect) {
+  gradeSelect.value = selectedGrade;
+  gradeSelect.addEventListener("change", () => {
+    selectedGrade = gradeSelect.value;
+    localStorage.setItem("selectedGrade", selectedGrade);
+    // reload saved picks for new grade
+    saved = JSON.parse(localStorage.getItem(storeKey())) || {};
+    // update groups and re-render
+    allGroups = CURRICULUM[selectedGrade] || [];
+    selectedTerm = termSelect ? termSelect.value : "1학기";
+    groups = selectedTerm === "전체" ? allGroups : allGroups.filter((g) => g.term === selectedTerm);
+    form.innerHTML = "";
+    if (groups.length === 0) {
+      form.innerHTML = '<p class="empty-msg">' + selectedGrade + ' 편제표가 아직 등록되지 않았어요.<br>홈에서 학년을 바꾸거나, 편제표 입력을 기다려 주세요.</p>';
+      document.querySelector("#footer-bar").hidden = true;
+    } else {
+      document.querySelector("#footer-bar").hidden = false;
+      renderGroups();
+      updateStatus();
+    }
+  });
+}
 
 const form = document.querySelector("#curriculum-form");
 const pickStatus = document.querySelector("#pick-status");
 const termSelect = document.querySelector("#term-select");
 let allGroups = CURRICULUM[selectedGrade] || [];
 let selectedTerm = termSelect ? termSelect.value : "1학기";
-let groups =
-  selectedTerm === "전체"
-    ? allGroups
-    : allGroups.filter((g) => g.term === selectedTerm);
+let groups = selectedTerm === "전체" ? allGroups : allGroups.filter((g) => g.term === selectedTerm);
 const ABS = new Set(typeof ABSOLUTE_SUBJECTS !== "undefined" ? ABSOLUTE_SUBJECTS : []);
 const SCIENCE = new Set(typeof SCIENCE_SUBJECTS !== "undefined" ? SCIENCE_SUBJECTS : []);
 const SOCIAL = new Set(typeof SOCIAL_SUBJECTS !== "undefined" ? SOCIAL_SUBJECTS : []);
 
 // 저장된 임시 선택 불러오기
-const STORE_KEY = "curriculumPick_" + selectedGrade;
+function storeKey() { return "curriculumPick_" + selectedGrade; }
 let saved = {};
-try { saved = JSON.parse(localStorage.getItem(STORE_KEY)) || {}; } catch (e) { saved = {}; }
+try { saved = JSON.parse(localStorage.getItem(storeKey())) || {}; } catch (e) { saved = {}; }
 
 // 학기 선택 이벤트
 if (termSelect) {
   termSelect.addEventListener("change", (e) => {
     selectedTerm = e.target.value;
-    groups =
-      selectedTerm === "전체"
-        ? allGroups
-        : allGroups.filter((g) => g.term === selectedTerm);
+    groups = selectedTerm === "전체" ? allGroups : allGroups.filter((g) => g.term === selectedTerm);
     form.innerHTML = "";
     if (groups.length === 0) {
       form.innerHTML = '<p class="empty-msg">선택한 학기에 과목이 없어요.</p>';
@@ -168,7 +185,7 @@ document.querySelector("#save-button").addEventListener("click", () => {
     if (vals.length !== pick) incomplete += 1;
   });
 
-  localStorage.setItem(STORE_KEY, JSON.stringify(result));
+  localStorage.setItem(storeKey(), JSON.stringify(result));
 
   if (incomplete > 0) {
     alert(`저장했어요. 아직 ${incomplete}개 선택군이 택 개수를 못 채웠어요.`);
