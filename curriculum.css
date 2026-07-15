@@ -69,7 +69,8 @@ input {
   font-weight: 500;
 }
 
-#grade-label {
+#grade-selector,
+#term-selector {
   margin: 0;
   font-size: 15px;
   color: #555;
@@ -83,14 +84,13 @@ input {
   box-shadow: 3px 3px 0 #c7b79a;
 }
 
-#grade-label strong {
-  display: inline-block;
-  margin-left: 4px;
-  padding: 0;
-  background: none;
+#grade-selector select,
+#term-selector select {
   border: none;
-  box-shadow: none;
+  background: transparent;
+  font-weight: 700;
   color: #222;
+  outline: none;
 }
 
 h4 {
@@ -138,15 +138,7 @@ h4 {
 }
 
 #term-select {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 4px;
-  min-width: 70px;
-  padding: 10px 14px;
-  background: #fff;
-  border: 2px solid #222;
-  border-radius: 18px;
+  /* reset - shared above */
 }
 
 
@@ -425,16 +417,18 @@ h4 {
     min-width: 0;
   }
 
-  .title-controls #grade-label,
+  .title-controls #grade-selector,
   .title-controls #term-selector {
     flex: 0 1 auto;
   }
 
+  .title-controls #grade-selector,
   .title-controls #term-selector {
     min-width: 120px;
     max-width: 100%;
   }
 
+  .title-controls #grade-selector select,
   .title-controls #term-selector select {
     width: 100%;
   }
