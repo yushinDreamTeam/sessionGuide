@@ -25,8 +25,13 @@
         <div class="title-row">
             <h4>우리학교 편제표</h4>
             <div class="title-controls">
-                <p id="grade-label"><strong id="grade-value">-</strong></p>
-                <div id="term-selector">
+                <div id="grade-selector" class="header-grade-selector">
+                    <select id="grade-select">
+                        <option value="2학년">2학년(현재 1학년)</option>
+                        <option value="3학년">3학년(현재 2학년)</option>
+                    </select>
+                </div>
+                <div id="term-selector" class="header-term-selector">
                     <select id="term-select">
                         <option value="전체">전체</option>
                         <option value="1학기">1학기</option>
